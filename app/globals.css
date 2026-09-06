@@ -1,49 +1,988 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html {
-  height: 100%;
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+﻿:root {
+  --atlas-bg: #FAFAF8;
+  --atlas-surface: #FFFFFF;
+  --atlas-panel: #E6EBE0;
+  --atlas-panel-alt: #EBF1ED;
+  --atlas-mint: #9BC1BC;
+  --atlas-mint-dark: #76A09B;
+  --atlas-coral: #ED6A5A;
+  --atlas-coral-dark: #D95342;
+  --atlas-coral-light: #FDECE9;
+  --atlas-charcoal: #22252A;
+  --atlas-charcoal-sub: #3A3F47;
+  --atlas-muted: #5A6578;
+  --atlas-wheat: #F4F1DE;
+  --atlas-cyan: #0081A7;
+  --atlas-border: #E2E6DF;
+  --atlas-border-subtle: rgba(34, 37, 42, 0.08);
 }
 
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--atlas-bg);
+  color: var(--atlas-charcoal);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.font-atlas-display {
+  font-family: 'Exo 2', 'Inter', sans-serif;
+}
+
+.font-atlas-serif {
+  font-family: 'Lora', 'Georgia', serif;
+}
+
+.atlas-marker {
+  position: relative;
+  display: inline-block;
+  padding: 0 4px;
+}
+
+.atlas-marker::after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  bottom: 0px;
+  height: 12%;
+  background: rgba(237, 106, 90, 0.38);
+  border-radius: 2px;
+  z-index: -1;
+  transform: rotate(-0.5deg);
+  transition: all 0.4s ease;
+}
+
+.atlas-marker:hover::after {
+  height: 80%;
+  background: rgba(237, 106, 90, 0.48);
+}
+
+.atlas-marker-mint::after {
+  background: rgba(155, 193, 188, 0.55);
+}
+
+.atlas-marker-solid {
+  background: #ED6A5A;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.atlas-compass-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease;
+}
+
+.atlas-compass-needle {
+  transform-origin: 50% 50%;
+  animation: compass-sway 8s ease-in-out infinite;
+}
+
+@keyframes compass-sway {
+
+  0%,
+  100% {
+    transform: rotate(0deg);
   }
+
+  25% {
+    transform: rotate(8deg);
+  }
+
+  75% {
+    transform: rotate(-6deg);
+  }
+}
+
+.atlas-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(250, 250, 248, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(34, 37, 42, 0.08);
+  transition: all 0.3s ease;
+}
+
+.atlas-nav-link {
+  color: #22252A;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Exo 2', 'Inter', sans-serif;
+  letter-spacing: 0.01em;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.atlas-nav-link:hover {
+  color: #ED6A5A;
+  background: rgba(237, 106, 90, 0.08);
+}
+
+.atlas-sage-panel {
+  background: #E6EBE0;
+  position: relative;
+}
+
+.atlas-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E6DF;
+  border-radius: 18px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(34, 37, 42, 0.04);
+}
+
+.atlas-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(34, 37, 42, 0.08);
+  border-color: #9BC1BC;
+}
+
+.quantum-3d-backdrop {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: auto;
+  z-index: 0;
+  opacity: 0.95;
+  transition: opacity 0.5s ease;
+
+}
+
+.atlas-content-layer {
+  position: relative;
+  z-index: 10;
+}
+
+.quantum-physics-hud {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 45;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(34, 37, 42, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 12px 36px rgba(34, 37, 42, 0.12);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Exo 2', sans-serif;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  visibility: hidden; 
+
+}
+
+.quantum-physics-hud:hover {
+  box-shadow: 0 16px 44px rgba(34, 37, 42, 0.18);
+  border-color: #ED6A5A;
+}
+
+.btn-atlas-coral {
+  background: #ED6A5A;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 15px;
+  font-family: 'Exo 2', sans-serif;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(237, 106, 90, 0.35);
+  transition: all 0.25s ease;
+}
+
+.btn-atlas-coral:hover {
+  background: #D95342;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(237, 106, 90, 0.45);
+}
+
+.btn-atlas-ghost {
+  background: transparent;
+  color: #22252A;
+  padding: 11px 22px;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 15px;
+  font-family: 'Exo 2', sans-serif;
+  text-decoration: none;
+  border: 1.5px solid rgba(34, 37, 42, 0.2);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-atlas-ghost:hover {
+  border-color: #22252A;
+  background: rgba(34, 37, 42, 0.05);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   ROADMAP  (/roadmap)
+   Stickman limb animations, the animated backdrop, the scroll
+   walker, and the page's responsive grids.
+   Everything here animates transform/opacity only.
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Stickman limbs ──────────────────────────────────────────── */
+
+@keyframes sm-wave {
+  0%, 100% { transform: rotate(-16deg); }
+  50%      { transform: rotate(18deg); }
+}
+
+@keyframes sm-bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-2.5px); }
+}
+
+@keyframes sm-read-nod {
+  0%, 100% { transform: rotate(6deg) translateY(1px); }
+  50%      { transform: rotate(11deg) translateY(3px); }
+}
+
+@keyframes sm-swing-a {
+  0%, 100% { transform: rotate(-22deg); }
+  50%      { transform: rotate(20deg); }
+}
+
+@keyframes sm-swing-b {
+  0%, 100% { transform: rotate(20deg); }
+  50%      { transform: rotate(-22deg); }
+}
+
+@keyframes sm-stride-a {
+  0%, 100% { transform: rotate(14deg); }
+  50%      { transform: rotate(-16deg); }
+}
+
+@keyframes sm-stride-b {
+  0%, 100% { transform: rotate(-16deg); }
+  50%      { transform: rotate(14deg); }
+}
+
+@keyframes sm-point {
+  0%, 100% { transform: rotate(0deg); }
+  50%      { transform: rotate(-7deg); }
+}
+
+@keyframes sm-hop {
+  0%, 100% { transform: translateY(0) scaleY(1); }
+  40%      { transform: translateY(-7px) scaleY(1.02); }
+  70%      { transform: translateY(-1px) scaleY(0.99); }
+}
+
+@keyframes sm-tilt {
+  0%, 100% { transform: rotate(-9deg); }
+  50%      { transform: rotate(-2deg); }
+}
+
+@keyframes sm-orbit-a {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes sm-orbit-b {
+  from { transform: rotate(180deg); }
+  to   { transform: rotate(540deg); }
+}
+
+@keyframes sm-flicker {
+  0%, 100% { opacity: 0.55; transform: scale(0.94); }
+  50%      { opacity: 1;    transform: scale(1.06); }
+}
+
+@keyframes sm-flag {
+  0%, 100% { transform: skewY(0deg) scaleX(1); }
+  50%      { transform: skewY(-7deg) scaleX(0.93); }
+}
+
+@keyframes sm-reach-a {
+  0%, 100% { transform: rotate(-11deg); }
+  50%      { transform: rotate(6deg); }
+}
+
+@keyframes sm-reach-b {
+  0%, 100% { transform: rotate(7deg); }
+  50%      { transform: rotate(-10deg); }
+}
+
+@keyframes sm-teeter {
+  0%, 100% { transform: rotate(-2.5deg); }
+  50%      { transform: rotate(2.5deg); }
+}
+
+@keyframes sm-semaphore-a {
+  0%, 100% { transform: rotate(-8deg); }
+  50%      { transform: rotate(10deg); }
+}
+
+@keyframes sm-semaphore-b {
+  0%, 100% { transform: rotate(12deg); }
+  50%      { transform: rotate(-6deg); }
+}
+
+@keyframes sm-dizzy {
+  0%, 100% { transform: rotate(-6deg); }
+  50%      { transform: rotate(8deg); }
+}
+
+.sm-wave      { animation: sm-wave 1.5s ease-in-out infinite; }
+.sm-bob       { animation: sm-bob 2.4s ease-in-out infinite; }
+.sm-read-nod  { animation: sm-read-nod 3.4s ease-in-out infinite; }
+.sm-swing-a   { animation: sm-swing-a 0.9s ease-in-out infinite; }
+.sm-swing-b   { animation: sm-swing-b 0.9s ease-in-out infinite; }
+.sm-stride-a  { animation: sm-stride-a 0.9s ease-in-out infinite; }
+.sm-stride-b  { animation: sm-stride-b 0.9s ease-in-out infinite; }
+.sm-point     { animation: sm-point 2.6s ease-in-out infinite; }
+.sm-hop       { animation: sm-hop 1.6s ease-in-out infinite; }
+.sm-tilt      { animation: sm-tilt 3s ease-in-out infinite; }
+.sm-orbit-a   { animation: sm-orbit-a 2.2s linear infinite; }
+.sm-orbit-b   { animation: sm-orbit-b 2.2s linear infinite; }
+.sm-flicker   { animation: sm-flicker 2.1s ease-in-out infinite; }
+.sm-flag      { animation: sm-flag 1.8s ease-in-out infinite; }
+.sm-reach-a   { animation: sm-reach-a 1.7s ease-in-out infinite; }
+.sm-reach-b   { animation: sm-reach-b 1.7s ease-in-out infinite; }
+.sm-teeter    { animation: sm-teeter 2.8s ease-in-out infinite; }
+.sm-semaphore-a { animation: sm-semaphore-a 1.3s ease-in-out infinite; }
+.sm-semaphore-b { animation: sm-semaphore-b 1.3s ease-in-out infinite; }
+.sm-dizzy     { animation: sm-dizzy 1.1s ease-in-out infinite; }
+
+/* ── Animated backdrop ───────────────────────────────────────── */
+
+.roadmap-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+@keyframes roadmap-grid-drift {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(44px, 44px, 0); }
+}
+
+.roadmap-bg-grid {
+  position: absolute;
+  inset: -60px;
+  background-image: radial-gradient(circle, rgba(34, 37, 42, 0.075) 1.2px, transparent 1.3px);
+  background-size: 44px 44px;
+  animation: roadmap-grid-drift 26s linear infinite;
+  will-change: transform;
+}
+
+.roadmap-bg-floaters {
+  position: absolute;
+  inset: 0;
+}
+
+@keyframes roadmap-float {
+  0%   { transform: translate3d(0, 0, 0) scale(1); opacity: 0.16; }
+  25%  { transform: translate3d(26px, -34px, 0) scale(1.22); opacity: 0.38; }
+  50%  { transform: translate3d(-18px, -60px, 0) scale(0.9); opacity: 0.22; }
+  75%  { transform: translate3d(-32px, -26px, 0) scale(1.14); opacity: 0.34; }
+  100% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.16; }
+}
+
+.roadmap-bg-floater {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.16;
+  animation-name: roadmap-float;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  will-change: transform, opacity;
+}
+
+.roadmap-bg-waves {
+  position: absolute;
+  left: 0;
+  top: 34%;
+  width: 100%;
+  height: 46vh;
+  opacity: 0.14;
+}
+
+.roadmap-bg-wave {
+  will-change: transform;
+}
+
+@keyframes roadmap-wave-a {
+  from { transform: translateX(0); }
+  to   { transform: translateX(360px); }
+}
+
+@keyframes roadmap-wave-b {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-480px); }
+}
+
+.roadmap-bg-wave-a { animation: roadmap-wave-a 14s linear infinite; }
+.roadmap-bg-wave-b { animation: roadmap-wave-b 21s linear infinite; }
+
+.roadmap-bg-orbits {
+  position: absolute;
+  right: -110px;
+  top: 10%;
+  width: 540px;
+  height: 540px;
+  opacity: 0.11;
+}
+
+@keyframes roadmap-orbit-cw {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes roadmap-orbit-ccw {
+  from { transform: rotate(360deg); }
+  to   { transform: rotate(0deg); }
+}
+
+.roadmap-bg-orbit {
+  transform-origin: 200px 200px;
+  will-change: transform;
+}
+
+.roadmap-bg-orbit-a { animation: roadmap-orbit-cw 46s linear infinite; }
+.roadmap-bg-orbit-b { animation: roadmap-orbit-ccw 68s linear infinite; }
+.roadmap-bg-orbit-c { animation: roadmap-orbit-cw 92s linear infinite; }
+
+/* ── The scroll walker + milestone nodes ─────────────────────── */
+
+.roadmap-walker {
+  will-change: transform;
+}
+
+@keyframes roadmap-node-pulse {
+  0%, 100% { box-shadow: 0 0 0 5px rgba(34, 37, 42, 0.07); }
+  50%      { box-shadow: 0 0 0 13px rgba(34, 37, 42, 0.03); }
+}
+
+.roadmap-node-live {
+  animation: roadmap-node-pulse 2.1s ease-in-out infinite;
+}
+
+/* ── Resource library: shelves + premium card polish ─────────── */
+
+/* Each kind gets a shelf. The header is a button; the body expands. */
+.roadmap-shelf {
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid var(--atlas-border);
+  border-radius: 20px;
+  padding: 18px 20px 20px;
+  box-shadow: 0 4px 18px rgba(34, 37, 42, 0.035);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.roadmap-shelf:hover {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 30px rgba(34, 37, 42, 0.06);
+}
+
+.roadmap-shelf-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+}
+
+/* The icon tile leans in when you hover the shelf. */
+.roadmap-shelf-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  flex-shrink: 0;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.roadmap-shelf-head:hover .roadmap-shelf-icon {
+  transform: translateY(-2px) rotate(-6deg) scale(1.05);
+}
+
+/* Hairline that fills across the shelf head on hover. */
+.roadmap-shelf-rule {
+  position: relative;
+  height: 1px;
+  background: var(--atlas-border);
+  margin: 15px 0 0;
+  overflow: hidden;
+}
+
+.roadmap-shelf-rule::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: scaleX(0);
+  transform-origin: left center;
+  background: linear-gradient(90deg, var(--atlas-coral), var(--atlas-mint));
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.roadmap-shelf:hover .roadmap-shelf-rule::after {
+  transform: scaleX(1);
+}
+
+/* Resource cards: a light sweep on hover, over the .atlas-card lift. */
+.roadmap-res-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.roadmap-res-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -70%;
+  width: 55%;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(255, 255, 255, 0.72),
+    transparent
+  );
+  transform: skewX(-14deg);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.roadmap-res-card:hover::before {
+  opacity: 1;
+  animation: roadmap-sheen 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes roadmap-sheen {
+  from { left: -70%; }
+  to   { left: 130%; }
+}
+
+/* Accent hairline that grows along the card's top edge. */
+.roadmap-res-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2.5px;
+  z-index: 1;
+  pointer-events: none;
+  background: var(--roadmap-card-accent, var(--atlas-coral));
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.roadmap-res-card:hover::after {
+  transform: scaleX(1);
+}
+
+.roadmap-res-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Arrow on the card's call-to-action nudges right on hover. */
+.roadmap-res-go {
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.roadmap-res-card:hover .roadmap-res-go {
+  transform: translateX(3px);
+}
+
+/* Filter pills */
+.roadmap-pill {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s ease,
+    border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.roadmap-pill:hover {
+  transform: translateY(-1.5px);
+}
+
+.roadmap-pill:active {
+  transform: translateY(0) scale(0.97);
+}
+
+/* The library guide's little floor shadow. */
+.roadmap-guide-shadow {
+  width: 54px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(34, 37, 42, 0.1);
+  animation: roadmap-guide-shadow 2.4s ease-in-out infinite;
+}
+
+@keyframes roadmap-guide-shadow {
+  0%, 100% { transform: scaleX(1); opacity: 0.5; }
+  50%      { transform: scaleX(0.9); opacity: 0.32; }
+}
+
+/* ── Grids ───────────────────────────────────────────────────── */
+
+.roadmap-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+.roadmap-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+.roadmap-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+.roadmap-grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(272px, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+@media (max-width: 1080px) {
+  .roadmap-grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 900px) {
+  .roadmap-grid-2,
+  .roadmap-grid-3,
+  .roadmap-grid-4 { grid-template-columns: minmax(0, 1fr); }
+
+  .roadmap-bg-orbits { display: none; }
+}
+
+@media (max-width: 560px) {
+  .roadmap-grid-auto { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* ── Reduced motion: stand everything still ──────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .sm-wave, .sm-bob, .sm-read-nod, .sm-swing-a, .sm-swing-b,
+  .sm-stride-a, .sm-stride-b, .sm-point, .sm-hop, .sm-tilt,
+  .sm-orbit-a, .sm-orbit-b, .sm-flicker, .sm-flag,
+  .sm-reach-a, .sm-reach-b,
+  .sm-teeter, .sm-semaphore-a, .sm-semaphore-b, .sm-dizzy,
+  .roadmap-bg-grid, .roadmap-bg-floater,
+  .roadmap-bg-wave-a, .roadmap-bg-wave-b,
+  .roadmap-bg-orbit-a, .roadmap-bg-orbit-b, .roadmap-bg-orbit-c,
+  .roadmap-node-live, .roadmap-guide-shadow {
+    animation: none !important;
+  }
+
+  .roadmap-res-card:hover::before { animation: none !important; opacity: 0; }
+  .roadmap-res-card::after,
+  .roadmap-shelf-rule::after { transition: none !important; }
+  .roadmap-shelf-head:hover .roadmap-shelf-icon,
+  .roadmap-pill:hover,
+  .roadmap-res-card:hover .roadmap-res-go { transform: none !important; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   QURIO QUBIT  (/qubit, /profile)
+   The Base Camp arcade: game cards, locks, playing pieces and the
+   badge wall. Same rules as the roadmap block — transform and
+   opacity only, and everything stands still under reduced motion.
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Game cards & locks ──────────────────────────────────────── */
+
+.qubit-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.qubit-card-open:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(34, 37, 42, 0.11);
+}
+
+/* A locked card is readable but visibly inert — the padlock and the
+   drained colour do the work, not a disabled grey wash. */
+.qubit-card-locked {
+  filter: saturate(0.45);
+  opacity: 0.9;
+}
+
+.qubit-card-locked:hover {
+  filter: saturate(0.7);
+  opacity: 1;
+}
+
+@keyframes qb-lock-shake {
+  0%, 100% { transform: rotate(0deg); }
+  25%      { transform: rotate(-9deg); }
+  60%      { transform: rotate(7deg); }
+}
+
+.qubit-card-locked:hover .qubit-lock {
+  animation: qb-lock-shake 0.5s ease-in-out;
+}
+
+/* Corner ribbon carrying the module number. */
+.qubit-order {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 6px 12px 7px;
+  border-bottom-left-radius: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* ── Shared game surface ─────────────────────────────────────── */
+
+.qubit-stage {
+  position: relative;
+  border-radius: 16px;
+  border: 1px solid var(--atlas-border);
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0) 60%),
+    var(--atlas-panel-alt);
+  overflow: hidden;
+}
+
+/* Faint graph paper so every stage reads as the same workbench. */
+.qubit-stage::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(34, 37, 42, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 37, 42, 0.05) 1px, transparent 1px);
+  background-size: 26px 26px;
+  pointer-events: none;
+}
+
+.qubit-choice {
+  position: relative;
+  border-radius: 12px;
+  border: 1.5px solid var(--atlas-border);
+  background: var(--atlas-surface);
+  cursor: pointer;
+  text-align: left;
+  transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.24s ease, box-shadow 0.24s ease;
+}
+
+.qubit-choice:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(34, 37, 42, 0.09);
+}
+
+.qubit-choice:disabled { cursor: default; }
+
+/* ── Balance Beam ────────────────────────────────────────────── */
+
+.qubit-beam {
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: 50% 50%;
+}
+
+.qubit-load {
+  transition: width 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.4s ease;
+}
+
+/* ── Collapse Catcher / Shot Noise ───────────────────────────── */
+
+@keyframes qb-pour {
+  from { opacity: 0; transform: translateY(-16px) scale(0.7); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.qubit-figure {
+  animation: qb-pour 0.34s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.qubit-bar {
+  transition: height 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── Gate Hopscotch ──────────────────────────────────────────── */
+
+@keyframes qb-pad-glow {
+  0%, 100% { transform: scale(1);    opacity: 0.5; }
+  50%      { transform: scale(1.14); opacity: 0.95; }
+}
+
+.qubit-pad-target::after {
+  content: '';
+  position: absolute;
+  inset: -7px;
+  border-radius: 50%;
+  border: 2px dashed currentColor;
+  animation: qb-pad-glow 2s ease-in-out infinite;
+}
+
+.qubit-pad {
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+}
+
+/* ── Twin Sync ───────────────────────────────────────────────── */
+
+@keyframes qb-twin-pulse {
+  0%, 100% { opacity: 0.3;  transform: scaleX(0.94); }
+  50%      { opacity: 0.95; transform: scaleX(1); }
+}
+
+.qubit-twin-link {
+  animation: qb-twin-pulse 1.9s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+
+/* ── Badges ──────────────────────────────────────────────────── */
+
+@keyframes qb-badge-pop {
+  0%   { transform: scale(0.5) rotate(-14deg); opacity: 0; }
+  55%  { transform: scale(1.12) rotate(4deg);  opacity: 1; }
+  100% { transform: scale(1) rotate(0deg);     opacity: 1; }
+}
+
+.qubit-badge {
+  transition: transform 0.34s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.qubit-badge-earned {
+  animation: qb-badge-pop 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.qubit-badge:hover { transform: translateY(-4px) scale(1.03); }
+
+/* One sweep of light across a freshly won award. */
+@keyframes qb-shine {
+  from { transform: translateX(-120%) skewX(-18deg); }
+  to   { transform: translateX(320%) skewX(-18deg); }
+}
+
+.qubit-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.qubit-shine::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 38%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.75), transparent);
+  animation: qb-shine 1.5s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
+  pointer-events: none;
+}
+
+/* ── Profile climb tracker ───────────────────────────────────── */
+
+@keyframes qb-flag-pop {
+  0%   { transform: translateY(6px) scale(0.6); opacity: 0; }
+  60%  { transform: translateY(-2px) scale(1.1); opacity: 1; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.qubit-hill-flag {
+  animation: qb-flag-pop 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.qubit-ring-track { transition: stroke-dashoffset 0.9s cubic-bezier(0.16, 1, 0.3, 1); }
+
+/* The climber walks to his new spot; the route fills in behind him.
+   Both are CSS transitions rather than springs so the end state is
+   correct even in a tab that is not currently painting frames. */
+.qubit-climber {
+  transition:
+    left 1.1s cubic-bezier(0.16, 1, 0.3, 1),
+    top 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.qubit-route { transition: stroke-dashoffset 1.1s cubic-bezier(0.16, 1, 0.3, 1); }
+
+/* Legend swatch on the climb tracker. */
+.qubit-key {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+/* ── Reduced motion ──────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .qubit-figure, .qubit-badge-earned, .qubit-hill-flag,
+  .qubit-twin-link, .qubit-card-locked:hover .qubit-lock,
+  .qubit-pad-target::after, .qubit-shine::after {
+    animation: none !important;
+  }
+
+  .qubit-beam, .qubit-load, .qubit-bar, .qubit-pad,
+  .qubit-badge, .qubit-choice, .qubit-card, .qubit-ring-track,
+  .qubit-climber, .qubit-route {
+    transition: none !important;
+  }
+
+  .qubit-card-open:hover,
+  .qubit-choice:hover:not(:disabled),
+  .qubit-badge:hover {
+    transform: none !important;
+  }
+
+  .qubit-shine::after { opacity: 0; }
 }
