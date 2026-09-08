@@ -1,0 +1,5 @@
+model,task,target,accuracy,precision,recall,f1_score,mae,mse,rmse,r2
+performance_linear_regression,regression,overall_score,,,,,0.0243,0.0008,0.0285,1.0
+learning_risk_logistic_regression,binary_classification,learning_risk,0.995,1.0,0.9841,0.992,,,,
+skill_decision_tree,multiclass_classification,skill_level,0.935,0.9364,0.935,0.9351,,,,
+skill_random_forest,multiclass_classification,skill_level,0.945,0.9484,0.945,0.9442,,,,

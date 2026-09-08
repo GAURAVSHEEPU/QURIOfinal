@@ -1,0 +1,45 @@
+{
+  "model": "LogisticRegression",
+  "target": "learning_risk",
+  "class_mapping": {
+    "0": "On-Track",
+    "1": "At-Risk"
+  },
+  "baseline_dummy_most_frequent": {
+    "accuracy": 0.685,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0
+  },
+  "model_performance": {
+    "train_metrics": {
+      "accuracy": 0.9838,
+      "precision": 0.9733,
+      "recall": 0.977,
+      "f1_score": 0.9751
+    },
+    "test_metrics": {
+      "accuracy": 0.995,
+      "precision": 1.0,
+      "recall": 0.9841,
+      "f1_score": 0.992
+    },
+    "confusion_matrix": {
+      "true_negatives": 137,
+      "false_positives": 0,
+      "false_negatives": 1,
+      "true_positives": 62,
+      "matrix_array": [
+        [
+          137,
+          0
+        ],
+        [
+          1,
+          62
+        ]
+      ]
+    }
+  },
+  "intercept": -5.7146
+}

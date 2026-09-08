@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import AuthGate from '@/components/auth/AuthGate';
 import RoadmapPage from '@/components/roadmap/RoadmapPage';
 
 export const metadata: Metadata = {
@@ -8,5 +9,9 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <RoadmapPage />;
+  return (
+    <AuthGate>
+      <RoadmapPage />
+    </AuthGate>
+  );
 }

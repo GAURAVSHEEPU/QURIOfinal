@@ -42,3 +42,7 @@ next-env.d.ts
 
 # claude code (local, per-developer)
 .claude/settings.local.json
+
+# Python bytecode from the optional circuit-backend server
+__pycache__/
+*.pyc

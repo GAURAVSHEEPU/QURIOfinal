@@ -11,8 +11,10 @@ import {
   GraduationCap,
   HardDrive,
   Lock,
+  LogOut,
   Play,
   RotateCcw,
+  Trash2,
   Trophy,
   Zap,
   type LucideIcon,
@@ -20,8 +22,11 @@ import {
 
 import AtlasNav from '../shared/AtlasNav';
 import RoadmapBackground from '../roadmap/RoadmapBackground';
-import Stickman from '../roadmap/Stickman';
+import Stickman, { type StickmanPose } from '../roadmap/Stickman';
 import { TRACK_BY_ID } from '../roadmap/roadmapData';
+
+import AvatarPicker from '../auth/AvatarPicker';
+import { type Account, useAuth, validateName } from '../auth/authStore';
 
 import BadgeWall from '../qubit/BadgeWall';
 import { BADGES, GAMES } from '../qubit/gameData';
@@ -32,11 +37,16 @@ import ClimbTracker from './ClimbTracker';
 /* ══════════════════════════════════════════════════════════════
    MY PROGRESS  ·  /profile
 
-   There is no account behind this — everything on the page comes
-   out of one localStorage key, which the page says out loud rather
-   than pretending otherwise. Same hydration rule as /qubit: the
-   empty state is what renders on the server, and real numbers
-   appear only once `hydrated` flips.
+   Everything on this page belongs to one account, and both the
+   account and its progress live in this browser's local storage —
+   which the page says out loud rather than implying a server that
+   is not there. Same hydration rule as /qubit: the empty state is
+   what renders first, and real numbers appear only once
+   `hydrated` flips.
+
+   The route is wrapped in <AuthGate>, so by the time this renders
+   there IS an account; the optional chaining below is belt and
+   braces, not a real signed-out path.
    ══════════════════════════════════════════════════════════════ */
 
 const EASE = [0.16, 1, 0.3, 1] as const;
@@ -58,7 +68,10 @@ export default function ProfilePage() {
 
 function ProgressPage() {
   const { progress, hydrated, resetProgress } = useProgress();
+  const { account } = useAuth();
   const [confirming, setConfirming] = useState(false);
+
+  const accent = account?.accent ?? '#ED6A5A';
 
   const studied = hydrated
     ? GAMES.filter((g) => progress.studied.includes(g.milestoneId)).length
@@ -100,9 +113,9 @@ function ProgressPage() {
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: 18, minWidth: 0 }}>
                 <Stickman
-                  pose={cleared === GAMES.length ? 'celebrate' : 'wave'}
+                  pose={cleared === GAMES.length ? 'celebrate' : (account?.pose ?? 'wave')}
                   size={104}
-                  accent="#ED6A5A"
+                  accent={accent}
                   label="Your stickman"
                 />
                 <div style={{ minWidth: 0 }}>
@@ -116,7 +129,7 @@ function ProgressPage() {
                       marginBottom: 6,
                     }}
                   >
-                    Base Camp · Beginner track
+                    {account ? `${account.name} · Base Camp` : 'Base Camp · Beginner track'}
                   </div>
                   <h1
                     style={{
@@ -134,6 +147,11 @@ function ProgressPage() {
                       ? 'A clean slate. Read a module, mark it studied, and this page starts filling in.'
                       : `${studied} module${studied === 1 ? '' : 's'} read, ${cleared} game${cleared === 1 ? '' : 's'} cleared${golds > 0 ? `, ${golds} at gold` : ''}.`}
                   </p>
+                  {account && (
+                    <div style={{ fontSize: 12.5, color: '#8A93A0', marginTop: 8 }}>
+                      {account.email} · member since {formatDate(account.createdAt)}
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -182,7 +200,7 @@ function ProgressPage() {
                 soft="#FEF3C7"
                 value={`${badges} / ${BADGES.length}`}
                 label="Badges earned"
-                sub="Six game, eight meta"
+                sub="Six game, nine meta"
               />
               <StatTile
                 icon={Zap}
@@ -342,6 +360,29 @@ function ProgressPage() {
           </div>
         </section>
 
+        {/* ══════════════ ACCOUNT ══════════════ */}
+        {account && (
+          <section style={{ padding: '44px 28px 0' }}>
+            <div style={{ maxWidth: 1080, margin: '0 auto' }}>
+              <h2
+                style={{
+                  fontFamily: "'Exo 2', sans-serif",
+                  fontSize: 24,
+                  fontWeight: 700,
+                  marginBottom: 6,
+                }}
+              >
+                Your <span className="atlas-marker">account</span>
+              </h2>
+              <p style={{ fontSize: 14, color: '#5A6578', marginBottom: 18, maxWidth: 620 }}>
+                The name and the stickman are yours to change whenever you like — the figure
+                follows you into the nav and up the hill above.
+              </p>
+              <AccountCard account={account} />
+            </div>
+          </section>
+        )}
+
         {/* ══════════════ STORAGE + RESET ══════════════ */}
         <section style={{ padding: '52px 28px 88px' }}>
           <div style={{ maxWidth: 1080, margin: '0 auto' }}>
@@ -362,12 +403,14 @@ function ProgressPage() {
                 <HardDrive size={19} color="#5A6578" style={{ flexShrink: 0, marginTop: 2 }} />
                 <div>
                   <div style={{ fontSize: 15, fontWeight: 700, color: '#22252A', marginBottom: 5 }}>
-                    Saved on this device only
+                    Your account lives in this browser
                   </div>
                   <p style={{ fontSize: 13.5, color: '#5A6578', lineHeight: 1.65 }}>
-                    There is no account and nothing is uploaded — your progress lives in this
-                    browser&apos;s local storage under one key. Clearing site data, or opening the
-                    site in a different browser or a private window, starts you over.
+                    Nothing is uploaded. Your account sits in this browser&apos;s local storage
+                    beside its own progress key, and the password is put through PBKDF2 before it
+                    is written — so it is not sitting there in plaintext. It is not proof against
+                    someone with devtools on this machine, though, and clearing site data or
+                    opening the Atlas in another browser starts you over.
                   </p>
                 </div>
               </div>
@@ -479,5 +522,184 @@ function StatTile({
       <div style={{ fontSize: 13.5, fontWeight: 600, color: '#3A3F47', marginTop: 5 }}>{label}</div>
       <div style={{ fontSize: 11.5, color: '#8A93A0', marginTop: 3, lineHeight: 1.45 }}>{sub}</div>
     </motion.div>
+  );
+}
+
+/* Client-only: <AuthGate> guarantees there is an account before this
+   renders, so a locale-dependent date cannot mismatch the prerender. */
+function formatDate(iso: string): string {
+  const date = new Date(iso);
+  if (Number.isNaN(date.getTime())) return 'today';
+  return date.toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
+}
+
+/* ══════════════════════════════════════════════════════════════
+   ACCOUNT CARD — name, stickman, and the two ways out.
+
+   Colour and pose commit on click, because a swatch that needed
+   saving would be a worse toy. The name has a Save because
+   half-typed names should not reach the nav.
+   ══════════════════════════════════════════════════════════════ */
+
+function AccountCard({ account }: { account: Account }) {
+  const { signOut, updateAccount, deleteAccount } = useAuth();
+
+  const [name, setName] = useState(account.name);
+  const [nameError, setNameError] = useState<string | null>(null);
+  const [saved, setSaved] = useState(false);
+  const [confirmingDelete, setConfirmingDelete] = useState(false);
+
+  const dirty = name.trim() !== account.name;
+
+  function saveName() {
+    const error = validateName(name);
+    if (error) {
+      setNameError(error);
+      return;
+    }
+    setNameError(null);
+    updateAccount({ name: name.trim() });
+    setSaved(true);
+    window.setTimeout(() => setSaved(false), 1800);
+  }
+
+  return (
+    <div
+      style={{
+        background: '#FFFFFF',
+        border: '1px solid #E2E6DF',
+        borderRadius: 18,
+        padding: '22px 24px',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(290px, 1fr))',
+        gap: 26,
+        alignItems: 'start',
+      }}
+    >
+      {/* ── The stickman ── */}
+      <div>
+        <p className="auth-label" style={{ marginBottom: 12 }}>
+          Your stickman
+        </p>
+        <AvatarPicker
+          accent={account.accent}
+          pose={account.pose}
+          onAccentChange={(accent) => updateAccount({ accent })}
+          onPoseChange={(pose: StickmanPose) => updateAccount({ pose })}
+          compact
+        />
+      </div>
+
+      {/* ── Details and exits ── */}
+      <div>
+        <label className="auth-label" htmlFor="account-name">
+          Name
+        </label>
+        <div style={{ display: 'flex', gap: 8 }}>
+          <input
+            id="account-name"
+            className="auth-field"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            aria-invalid={nameError ? true : undefined}
+            aria-describedby={nameError ? 'account-name-error' : undefined}
+            maxLength={40}
+          />
+          <button
+            type="button"
+            onClick={saveName}
+            disabled={!dirty}
+            className="btn-atlas-ghost"
+            style={{ padding: '9px 16px', fontSize: 13, opacity: dirty ? 1 : 0.4, flexShrink: 0 }}
+          >
+            Save
+          </button>
+        </div>
+        {nameError && (
+          <p className="auth-error" id="account-name-error">
+            {nameError}
+          </p>
+        )}
+        {saved && !nameError && (
+          <p className="auth-hint" style={{ color: '#0081A7', fontWeight: 600 }} role="status">
+            Saved.
+          </p>
+        )}
+
+        <label className="auth-label" htmlFor="account-email" style={{ marginTop: 16 }}>
+          Email
+        </label>
+        <input
+          id="account-email"
+          className="auth-field"
+          value={account.email}
+          readOnly
+          disabled
+        />
+        <p className="auth-hint">
+          The email is the login handle and cannot be changed — there is no mail channel to confirm
+          a new one against.
+        </p>
+
+        <div
+          style={{
+            marginTop: 20,
+            paddingTop: 18,
+            borderTop: '1px solid #E2E6DF',
+            display: 'flex',
+            gap: 10,
+            flexWrap: 'wrap',
+            alignItems: 'center',
+          }}
+        >
+          <button
+            type="button"
+            onClick={signOut}
+            className="btn-atlas-ghost"
+            style={{ padding: '9px 18px', fontSize: 13 }}
+          >
+            <LogOut size={13} /> Sign out
+          </button>
+
+          {confirmingDelete ? (
+            <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
+              <span style={{ fontSize: 12.5, color: '#D95342', fontWeight: 600 }}>
+                Delete the account and everything it has earned?
+              </span>
+              <button
+                type="button"
+                onClick={() => setConfirmingDelete(false)}
+                className="btn-atlas-ghost"
+                style={{ padding: '8px 16px', fontSize: 13 }}
+              >
+                Keep it
+              </button>
+              <button
+                type="button"
+                onClick={deleteAccount}
+                className="btn-atlas-coral"
+                style={{ padding: '8px 16px', fontSize: 13 }}
+              >
+                <Trash2 size={13} /> Yes, delete
+              </button>
+            </div>
+          ) : (
+            <button
+              type="button"
+              onClick={() => setConfirmingDelete(true)}
+              className="btn-atlas-ghost"
+              style={{ padding: '9px 18px', fontSize: 13, color: '#D95342' }}
+            >
+              <Trash2 size={13} /> Delete account
+            </button>
+          )}
+        </div>
+
+        <p className="auth-hint" style={{ marginTop: 12 }}>
+          Deleting removes the account record and its progress from this browser. Since there is no
+          password reset, this is also the way out of a password you cannot remember.
+        </p>
+      </div>
+    </div>
   );
 }

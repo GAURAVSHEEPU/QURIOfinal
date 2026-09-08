@@ -33,7 +33,7 @@ export default function QuantumAtlasLandingPage() {
     {
       quote:
         'The interactive simulations and visual Bloch spheres in the Qurio Atlas finally made superposition and phase rotations click. It feels like an authentic scientific field guide.',
-      name: 'Dr. Ananya Ray',
+      name: 'Dr. VISHNU RAI',
       affiliation: 'Quantum Information Fellow, IISc',
       role: 'Researcher',
     },
@@ -188,7 +188,7 @@ export default function QuantumAtlasLandingPage() {
                     marginLeft: 4,
                   }}
                 >
-                  <Cpu size={16} /> Try Live Circuit Builder →
+                  <Cpu size={16} /> Try Circuit Studio →
                 </Link>
               </div>
             </motion.div>
@@ -314,7 +314,7 @@ export default function QuantumAtlasLandingPage() {
                   className="btn-atlas-ghost"
                   style={{ width: '100%', justifyContent: 'center', fontSize: 14, borderColor: '#D97706', color: '#D97706' }}
                 >
-                  Launch Circuit Lab <ArrowRight size={14} />
+                  Open Circuit Studio <ArrowRight size={14} />
                 </Link>
               </motion.div>
             </div>
@@ -1028,7 +1028,7 @@ export default function QuantumAtlasLandingPage() {
                 </h4>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 8, fontSize: 14 }}>
                   <Link href="/circuit" style={{ color: '#22252A', textDecoration: 'none' }}>
-                    Circuit Builder
+                    Circuit Studio
                   </Link>
                   <Link href="/simulate" style={{ color: '#22252A', textDecoration: 'none' }}>
                     3D Bloch Simulator
@@ -1085,7 +1085,7 @@ export default function QuantumAtlasLandingPage() {
                 <Link href="/learn" style={{ color: '#22252A', textDecoration: 'none' }}>
                   Privacy & Terms
                 </Link>
-                <Link href="/dashboard" style={{ color: '#22252A', textDecoration: 'none', fontWeight: 600 }}>
+                <Link href="/login#signup" style={{ color: '#22252A', textDecoration: 'none', fontWeight: 600 }}>
                   Enter Learning Dashboard →
                 </Link>
               </div>

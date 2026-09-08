@@ -8,13 +8,26 @@ import { BADGES } from './gameData';
    PROGRESS STORE — the one source of truth for what a learner has
    studied, played and earned.
 
-   There is no backend anywhere in this project, so progress lives
-   in localStorage on the learner's own device. Three routes read
-   it (/roadmap marks modules studied, /qubit gates the games,
+   Progress lives in localStorage on the learner's own device,
+   keyed by account. Four routes read it (/roadmap marks modules
+   studied, /qubit gates the games, /circuit files challenges,
    /profile visualises the climb) so it is a module-level store
    with subscribers rather than per-component state — otherwise the
    roadmap's "studied" toggle and the portal's locks could drift
    apart within a single navigation.
+
+   WHOSE PROGRESS. Each account gets its own key,
+   `qurio.progress.v1:<uid>`. The active uid is read straight out
+   of the session key that authStore writes, rather than by
+   importing authStore — that would be a cycle, and this store has
+   to get the right answer on its very first read, before any
+   effect has run. SESSION_KEY below is the shared contract; it is
+   commented at the other end too.
+
+   The bare `qurio.progress.v1` is the guest key: what a signed-out
+   visitor writes, and where everyone's progress lived before
+   accounts existed. claimGuestProgress() hands it to the first
+   account created on this browser so that work is not lost.
 
    HYDRATION: these pages are statically prerendered, and
    localStorage does not exist on the server. Every consumer must
@@ -22,7 +35,10 @@ import { BADGES } from './gameData';
    an effect. Reading storage during render would mismatch.
    ══════════════════════════════════════════════════════════════ */
 
-const STORAGE_KEY = 'qurio.progress.v1';
+/** Signed-out progress, and the pre-accounts key. */
+const GUEST_KEY = 'qurio.progress.v1';
+/** Written by components/auth/authStore.ts — see the note above. */
+const SESSION_KEY = 'qurio.session.v1';
 const VERSION = 1;
 
 export type GameId = 'g-beam' | 'g-collapse' | 'g-hopscotch' | 'g-twins' | 'g-noise' | 'g-relay';
@@ -154,10 +170,34 @@ function normalise(raw: unknown): Progress {
   return { version: VERSION, studied, games, badges, flags };
 }
 
-function readStorage(): Progress {
+/* ── Whose progress ───────────────────────────────────────────── */
+
+/**
+ * The signed-in account id, straight from the session key. Read on
+ * demand rather than cached, so the very first ensureLoaded() —
+ * which can happen before any effect — already lands on the right
+ * person's data.
+ */
+function sessionUid(): string | null {
+  if (typeof window === 'undefined') return null;
+  try {
+    const raw = window.localStorage.getItem(SESSION_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw);
+    return isRecord(parsed) && typeof parsed.uid === 'string' ? parsed.uid : null;
+  } catch {
+    return null;
+  }
+}
+
+function storageKey(uid: string | null = sessionUid()): string {
+  return uid ? `${GUEST_KEY}:${uid}` : GUEST_KEY;
+}
+
+function readStorage(key: string = storageKey()): Progress {
   if (typeof window === 'undefined') return EMPTY_PROGRESS;
   try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
+    const raw = window.localStorage.getItem(key);
     if (!raw) return EMPTY_PROGRESS;
     return normalise(JSON.parse(raw));
   } catch {
@@ -166,10 +206,21 @@ function readStorage(): Progress {
   }
 }
 
+function isEmpty(p: Progress): boolean {
+  return (
+    p.studied.length === 0 &&
+    p.flags.length === 0 &&
+    Object.keys(p.badges).length === 0 &&
+    Object.keys(p.games).length === 0
+  );
+}
+
 /* ── Module-level store ───────────────────────────────────────── */
 
 let state: Progress = EMPTY_PROGRESS;
 let loaded = false;
+/** Mirrors the session key; kept so a sign-out can be detected. */
+let activeUid: string | null = null;
 const listeners = new Set<() => void>();
 
 /** Games cleared in THIS tab session — powers the marathon badge. */
@@ -177,17 +228,57 @@ let sessionClears = new Set<GameId>();
 
 function ensureLoaded() {
   if (loaded || typeof window === 'undefined') return;
-  state = readStorage();
+  activeUid = sessionUid();
+  state = readStorage(storageKey(activeUid));
   loaded = true;
 }
 
 function persist() {
   if (typeof window === 'undefined') return;
   try {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    window.localStorage.setItem(storageKey(activeUid), JSON.stringify(state));
   } catch {
     // Over quota or storage denied — the session still works in memory.
   }
+}
+
+/* ── Account switching ────────────────────────────────────────── */
+
+/**
+ * Re-points the store at another account's progress. Called by
+ * authStore on sign-in, sign-out and cross-tab session changes, so
+ * every mounted page re-renders against the new person's data
+ * rather than the last one's.
+ */
+export function setActiveUser(uid: string | null) {
+  if (loaded && uid === activeUid) return;
+  activeUid = uid;
+  /* A new learner has not cleared anything in this tab. */
+  sessionClears = new Set();
+  state = readStorage(storageKey(uid));
+  loaded = true;
+  emit();
+}
+
+/**
+ * Hands whatever a signed-out visitor did to their brand-new
+ * account. Only ever fires for an account whose own slot is still
+ * empty, so a second sign-up on the same browser starts clean.
+ * Returns whether anything was actually moved.
+ */
+export function claimGuestProgress(uid: string): boolean {
+  if (typeof window === 'undefined') return false;
+  const guest = readStorage(GUEST_KEY);
+  if (isEmpty(guest)) return false;
+  if (!isEmpty(readStorage(storageKey(uid)))) return false;
+
+  try {
+    window.localStorage.setItem(storageKey(uid), JSON.stringify(guest));
+    window.localStorage.removeItem(GUEST_KEY);
+  } catch {
+    return false;
+  }
+  return true;
 }
 
 function emit() {
@@ -236,6 +327,15 @@ export function unmarkStudied(milestoneId: string): string[] {
   );
 }
 
+/**
+ * Raises a one-off achievement flag outside a scored game — Circuit
+ * Studio's challenges use this, since a circuit has no score to file.
+ * Returns any badges the flag unlocked.
+ */
+export function raiseFlag(flag: string): string[] {
+  return commit((p) => (p.flags.includes(flag) ? p : { ...p, flags: [...p.flags, flag] }));
+}
+
 export interface GameResult {
   score: number;
   max: number;
@@ -280,7 +380,7 @@ export function resetProgress() {
   sessionClears = new Set();
   if (typeof window !== 'undefined') {
     try {
-      window.localStorage.removeItem(STORAGE_KEY);
+      window.localStorage.removeItem(storageKey(activeUid));
     } catch {
       /* nothing to clean up */
     }
@@ -297,6 +397,7 @@ export interface UseProgress {
   markStudied: typeof markStudied;
   unmarkStudied: typeof unmarkStudied;
   recordResult: typeof recordResult;
+  raiseFlag: typeof raiseFlag;
   resetProgress: typeof resetProgress;
   isStudied: (milestoneId: string) => boolean;
 }
@@ -313,9 +414,11 @@ export function useProgress(): UseProgress {
     const listener = () => setSnapshot(state);
     listeners.add(listener);
 
-    /* Another tab wrote progress — reload and fan out so both stay level. */
+    /* Another tab wrote progress — reload and fan out so both stay level.
+       The session key counts too: signing in elsewhere changes whose
+       progress this key even refers to. */
     const onStorage = (e: StorageEvent) => {
-      if (e.key !== null && e.key !== STORAGE_KEY) return;
+      if (e.key !== null && e.key !== storageKey() && e.key !== SESSION_KEY) return;
       loaded = false;
       ensureLoaded();
       emit();
@@ -339,6 +442,7 @@ export function useProgress(): UseProgress {
     markStudied,
     unmarkStudied,
     recordResult,
+    raiseFlag,
     resetProgress,
     isStudied,
   };

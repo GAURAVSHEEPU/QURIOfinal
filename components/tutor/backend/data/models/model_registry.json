@@ -1,0 +1,54 @@
+{
+  "performance_predictor": {
+    "model_name": "performance_predictor",
+    "model_type": "LinearRegression",
+    "task": "regression",
+    "target": "overall_score",
+    "artifact_path": "data/models/performance_linear_regression.joblib",
+    "preprocessor_path": "data/processed/ml_preprocessor.joblib",
+    "input_feature_count": 20,
+    "output_type": "float (continuous percentage score 0-100)",
+    "metrics": {
+      "mae": 0.0243,
+      "rmse": 0.0285,
+      "r2": 1.0
+    },
+    "status": "prototype_validated"
+  },
+  "learning_risk_predictor": {
+    "model_name": "learning_risk_predictor",
+    "model_type": "LogisticRegression",
+    "task": "binary_classification",
+    "target": "learning_risk",
+    "artifact_path": "data/models/learning_risk_logistic_regression.joblib",
+    "preprocessor_path": "data/processed/ml_preprocessor.joblib",
+    "input_feature_count": 20,
+    "output_type": "int (0 = On-Track, 1 = At-Risk) + class probabilities",
+    "metrics": {
+      "accuracy": 0.995,
+      "precision": 1.0,
+      "recall": 0.9841,
+      "f1_score": 0.992
+    },
+    "status": "prototype_validated"
+  },
+  "skill_classifier": {
+    "preferred_model": "skill_random_forest",
+    "model_name": "skill_random_forest",
+    "model_type": "RandomForestClassifier",
+    "task": "multiclass_classification",
+    "target": "skill_level",
+    "artifact_path": "data/models/skill_random_forest.joblib",
+    "fallback_artifact_path": "data/models/skill_decision_tree.joblib",
+    "preprocessor_path": "data/processed/ml_preprocessor.joblib",
+    "input_feature_count": 20,
+    "output_type": "str (Beginner, Intermediate, Advanced)",
+    "metrics": {
+      "accuracy": 0.945,
+      "precision": 0.9484,
+      "recall": 0.945,
+      "f1_score": 0.9442
+    },
+    "status": "prototype_validated"
+  }
+}

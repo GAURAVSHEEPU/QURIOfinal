@@ -1,0 +1,10 @@
+topic_column,topic_id,difficulty_tier,mean_score,median_score,std_dev,min_score,max_score
+qubits_score,qubits,Beginner,75.8,76.65,13.75,29.7,100.0
+superposition_score,superposition,Beginner,75.82,75.9,13.82,30.6,100.0
+measurement_score,measurement,Beginner,75.92,76.0,13.81,30.2,100.0
+quantum_gates_score,quantum_gates,Intermediate,63.68,63.8,17.56,4.0,100.0
+entanglement_score,entanglement,Intermediate,63.69,63.8,17.56,5.9,100.0
+bell_states_score,bell_states,Intermediate,63.44,63.5,17.42,4.3,100.0
+quantum_circuits_score,quantum_circuits,Intermediate,63.73,63.25,17.4,4.5,100.0
+grover_score,grovers_algorithm,Advanced,50.54,49.95,20.9,0.0,100.0
+shor_score,shors_algorithm,Advanced,49.93,50.0,21.05,0.0,100.0

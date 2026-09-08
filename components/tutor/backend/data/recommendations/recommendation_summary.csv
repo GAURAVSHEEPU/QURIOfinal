@@ -1,0 +1,1001 @@
+learner_id,recommendation_count,top_topic,top_action,top_type,top_priority
+LEARNER_0001,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0002,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0003,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0004,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0005,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0006,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0007,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0008,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0009,5,Quantum Circuits,Review Quantum Circuits fundamentals,review_weak_topic,100.0
+LEARNER_0010,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0011,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,100.0
+LEARNER_0012,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0013,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0014,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0015,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0016,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0017,5,Superposition,Reinforce prerequisite concept: Superposition,reinforce_prerequisite,100.0
+LEARNER_0018,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0019,5,Qubits,Reinforce prerequisite concept: Qubits,reinforce_prerequisite,100.0
+LEARNER_0020,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0021,5,Quantum Circuits,Practice targeted exercises in Quantum Circuits,practice_developing_topic,78.7
+LEARNER_0022,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0023,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0024,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0025,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0026,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0027,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0028,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0029,5,Shor's Algorithm,Practice targeted exercises in Shor's Algorithm,practice_developing_topic,81.7
+LEARNER_0030,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0031,5,Bell States,Review Bell States fundamentals,review_weak_topic,100.0
+LEARNER_0032,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0033,5,Shor's Algorithm,Practice targeted exercises in Shor's Algorithm,practice_developing_topic,81.58
+LEARNER_0034,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0035,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,99.15
+LEARNER_0036,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0037,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0038,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0039,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0040,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,96.35
+LEARNER_0041,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0042,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0043,5,Grover's Algorithm,Attempt an advanced quantum algorithm challenge in Grover's Algorithm,attempt_challenge,55.52
+LEARNER_0044,5,Quantum Circuits,Review Quantum Circuits fundamentals,review_weak_topic,100.0
+LEARNER_0045,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0046,5,Quantum Circuits,Practice targeted exercises in Quantum Circuits,practice_developing_topic,76.8
+LEARNER_0047,5,Grover's Algorithm,Practice targeted exercises in Grover's Algorithm,practice_developing_topic,82.5
+LEARNER_0048,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0049,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0050,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0051,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0052,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0053,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0054,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0055,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0056,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,100.0
+LEARNER_0057,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,54.35
+LEARNER_0058,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0059,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0060,5,Quantum Measurement,Reinforce prerequisite concept: Quantum Measurement,reinforce_prerequisite,100.0
+LEARNER_0061,5,Qubits,Reinforce prerequisite concept: Qubits,reinforce_prerequisite,100.0
+LEARNER_0062,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0063,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0064,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,100.0
+LEARNER_0065,5,Shor's Algorithm,Review Shor's Algorithm fundamentals,review_weak_topic,100.0
+LEARNER_0066,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0067,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0068,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,52.23
+LEARNER_0069,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0070,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0071,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0072,5,Qubits,Reinforce prerequisite concept: Qubits,reinforce_prerequisite,100.0
+LEARNER_0073,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0074,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0075,5,Grover's Algorithm,Attempt an advanced quantum algorithm challenge in Grover's Algorithm,attempt_challenge,55.02
+LEARNER_0076,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0077,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0078,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0079,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0080,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0081,5,Shor's Algorithm,Review Shor's Algorithm fundamentals,review_weak_topic,100.0
+LEARNER_0082,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0083,5,Shor's Algorithm,Practice targeted exercises in Shor's Algorithm,practice_developing_topic,81.75
+LEARNER_0084,5,Quantum Circuits,Practice targeted exercises in Quantum Circuits,practice_developing_topic,76.33
+LEARNER_0085,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0086,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0087,5,Shor's Algorithm,Review Shor's Algorithm fundamentals,review_weak_topic,100.0
+LEARNER_0088,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0089,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0090,5,Grover's Algorithm,Attempt an advanced quantum algorithm challenge in Grover's Algorithm,attempt_challenge,54.05
+LEARNER_0091,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0092,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0093,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0094,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0095,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0096,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,55.7
+LEARNER_0097,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0098,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0099,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0100,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0101,5,Grover's Algorithm,Attempt an advanced quantum algorithm challenge in Grover's Algorithm,attempt_challenge,52.3
+LEARNER_0102,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0103,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0104,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0105,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0106,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,53.38
+LEARNER_0107,5,Grover's Algorithm,Review Grover's Algorithm fundamentals,review_weak_topic,100.0
+LEARNER_0108,5,Qubits,Reinforce prerequisite concept: Qubits,reinforce_prerequisite,100.0
+LEARNER_0109,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0110,5,Quantum Gates,Practice targeted exercises in Quantum Gates,practice_developing_topic,76.35
+LEARNER_0111,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0112,5,Bell States,Review Bell States fundamentals,review_weak_topic,100.0
+LEARNER_0113,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0114,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0115,5,Shor's Algorithm,Review Shor's Algorithm fundamentals,review_weak_topic,97.08
+LEARNER_0116,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0117,5,Qubits,Reinforce prerequisite concept: Qubits,reinforce_prerequisite,100.0
+LEARNER_0118,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0119,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,97.17
+LEARNER_0120,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0121,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0122,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0123,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0124,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0125,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0126,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0127,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0128,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0129,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,99.0
+LEARNER_0130,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,50.42
+LEARNER_0131,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0132,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0133,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0134,5,Entanglement,Practice targeted exercises in Entanglement,practice_developing_topic,77.1
+LEARNER_0135,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0136,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0137,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0138,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0139,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0140,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0141,5,Shor's Algorithm,Review Shor's Algorithm fundamentals,review_weak_topic,91.38
+LEARNER_0142,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0143,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,100.0
+LEARNER_0144,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0145,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0146,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0147,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0148,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0149,5,Bell States,Practice targeted exercises in Bell States,practice_developing_topic,76.55
+LEARNER_0150,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0151,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0152,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,53.77
+LEARNER_0153,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0154,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0155,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0156,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0157,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0158,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0159,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0160,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0161,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0162,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,98.92
+LEARNER_0163,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0164,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0165,5,Grover's Algorithm,Attempt an advanced quantum algorithm challenge in Grover's Algorithm,attempt_challenge,51.62
+LEARNER_0166,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0167,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0168,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0169,5,Quantum Circuits,Review Quantum Circuits fundamentals,review_weak_topic,100.0
+LEARNER_0170,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,100.0
+LEARNER_0171,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0172,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0173,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0174,5,Quantum Measurement,Practice targeted exercises in Quantum Measurement,practice_developing_topic,77.9
+LEARNER_0175,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0176,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0177,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0178,5,Shor's Algorithm,Review Shor's Algorithm fundamentals,review_weak_topic,100.0
+LEARNER_0179,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,100.0
+LEARNER_0180,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0181,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0182,5,Shor's Algorithm,Practice targeted exercises in Shor's Algorithm,practice_developing_topic,82.62
+LEARNER_0183,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0184,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0185,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0186,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0187,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0188,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,54.38
+LEARNER_0189,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0190,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0191,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,100.0
+LEARNER_0192,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0193,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,98.15
+LEARNER_0194,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0195,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0196,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0197,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0198,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0199,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0200,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,98.88
+LEARNER_0201,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0202,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0203,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0204,5,Quantum Circuits,Review Quantum Circuits fundamentals,review_weak_topic,100.0
+LEARNER_0205,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0206,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0207,5,Grover's Algorithm,Attempt an advanced quantum algorithm challenge in Grover's Algorithm,attempt_challenge,55.1
+LEARNER_0208,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0209,5,Qubits,Reinforce prerequisite concept: Qubits,reinforce_prerequisite,100.0
+LEARNER_0210,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0211,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0212,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0213,5,Bell States,Review Bell States fundamentals,review_weak_topic,100.0
+LEARNER_0214,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0215,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0216,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0217,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,55.58
+LEARNER_0218,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0219,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0220,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0221,5,Grover's Algorithm,Practice targeted exercises in Grover's Algorithm,practice_developing_topic,76.67
+LEARNER_0222,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,98.03
+LEARNER_0223,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0224,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0225,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,100.0
+LEARNER_0226,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,100.0
+LEARNER_0227,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0228,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0229,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0230,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0231,5,Grover's Algorithm,Practice targeted exercises in Grover's Algorithm,practice_developing_topic,82.25
+LEARNER_0232,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0233,5,Grover's Algorithm,Attempt an advanced quantum algorithm challenge in Grover's Algorithm,attempt_challenge,52.65
+LEARNER_0234,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0235,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,54.7
+LEARNER_0236,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0237,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0238,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0239,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0240,5,Shor's Algorithm,Review Shor's Algorithm fundamentals,review_weak_topic,100.0
+LEARNER_0241,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0242,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0243,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0244,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,51.9
+LEARNER_0245,5,Entanglement,Attempt an advanced quantum algorithm challenge in Entanglement,attempt_challenge,51.25
+LEARNER_0246,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0247,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0248,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0249,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,100.0
+LEARNER_0250,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0251,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,100.0
+LEARNER_0252,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0253,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0254,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0255,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0256,5,Shor's Algorithm,Slow down and reinforce core fundamentals starting with Shor's Algorithm,slow_down_reinforce,98.85
+LEARNER_0257,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0258,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0259,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0260,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0261,5,Grover's Algorithm,Attempt an advanced quantum algorithm challenge in Grover's Algorithm,attempt_challenge,55.12
+LEARNER_0262,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0263,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0264,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0265,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0266,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0267,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0268,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0269,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,55.95
+LEARNER_0270,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,97.03
+LEARNER_0271,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0272,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0273,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0274,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0275,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0276,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0277,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0278,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0279,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0280,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0281,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0282,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0283,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0284,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0285,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0286,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0287,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0288,5,Grover's Algorithm,Practice targeted exercises in Grover's Algorithm,practice_developing_topic,81.78
+LEARNER_0289,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0290,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0291,5,Bell States,Review Bell States fundamentals,review_weak_topic,100.0
+LEARNER_0292,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0293,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0294,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0295,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,98.5
+LEARNER_0296,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0297,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0298,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0299,5,Shor's Algorithm,Practice targeted exercises in Shor's Algorithm,practice_developing_topic,83.2
+LEARNER_0300,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0301,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0302,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0303,5,Qubits,Reinforce prerequisite concept: Qubits,reinforce_prerequisite,100.0
+LEARNER_0304,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,52.1
+LEARNER_0305,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0306,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0307,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0308,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0309,5,Superposition,Reinforce prerequisite concept: Superposition,reinforce_prerequisite,100.0
+LEARNER_0310,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0311,5,Qubits,Reinforce prerequisite concept: Qubits,reinforce_prerequisite,100.0
+LEARNER_0312,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0313,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0314,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0315,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,99.05
+LEARNER_0316,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0317,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0318,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0319,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0320,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0321,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0322,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0323,5,Grover's Algorithm,Practice targeted exercises in Grover's Algorithm,practice_developing_topic,81.3
+LEARNER_0324,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0325,5,Entanglement,Practice targeted exercises in Entanglement,practice_developing_topic,76.55
+LEARNER_0326,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0327,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0328,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0329,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0330,5,Grover's Algorithm,Practice targeted exercises in Grover's Algorithm,practice_developing_topic,82.75
+LEARNER_0331,5,Qubits,Reinforce prerequisite concept: Qubits,reinforce_prerequisite,100.0
+LEARNER_0332,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0333,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0334,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0335,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0336,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,100.0
+LEARNER_0337,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,54.92
+LEARNER_0338,5,Bell States,Review Bell States fundamentals,review_weak_topic,100.0
+LEARNER_0339,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0340,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0341,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0342,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0343,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0344,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0345,5,Grover's Algorithm,Practice targeted exercises in Grover's Algorithm,practice_developing_topic,79.17
+LEARNER_0346,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0347,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,100.0
+LEARNER_0348,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0349,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0350,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0351,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0352,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0353,5,Grover's Algorithm,Attempt an advanced quantum algorithm challenge in Grover's Algorithm,attempt_challenge,54.9
+LEARNER_0354,5,Quantum Circuits,Review Quantum Circuits fundamentals,review_weak_topic,100.0
+LEARNER_0355,5,Quantum Circuits,Review Quantum Circuits fundamentals,review_weak_topic,100.0
+LEARNER_0356,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0357,5,Shor's Algorithm,Practice targeted exercises in Shor's Algorithm,practice_developing_topic,83.47
+LEARNER_0358,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0359,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0360,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0361,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0362,5,Shor's Algorithm,Practice targeted exercises in Shor's Algorithm,practice_developing_topic,77.2
+LEARNER_0363,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0364,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0365,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0366,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0367,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0368,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0369,5,Grover's Algorithm,Attempt an advanced quantum algorithm challenge in Grover's Algorithm,attempt_challenge,54.85
+LEARNER_0370,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0371,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0372,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0373,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0374,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0375,5,Shor's Algorithm,Practice targeted exercises in Shor's Algorithm,practice_developing_topic,82.0
+LEARNER_0376,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0377,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0378,5,Grover's Algorithm,Attempt an advanced quantum algorithm challenge in Grover's Algorithm,attempt_challenge,52.75
+LEARNER_0379,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,98.65
+LEARNER_0380,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0381,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0382,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,52.67
+LEARNER_0383,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0384,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0385,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0386,5,Quantum Circuits,Slow down and reinforce core fundamentals starting with Quantum Circuits,slow_down_reinforce,93.3
+LEARNER_0387,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0388,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0389,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0390,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0391,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0392,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0393,5,Superposition,Reinforce prerequisite concept: Superposition,reinforce_prerequisite,100.0
+LEARNER_0394,5,Quantum Measurement,Reinforce prerequisite concept: Quantum Measurement,reinforce_prerequisite,100.0
+LEARNER_0395,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0396,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0397,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0398,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0399,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0400,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0401,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0402,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,97.85
+LEARNER_0403,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0404,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0405,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0406,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0407,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0408,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0409,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0410,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0411,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0412,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0413,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0414,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0415,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0416,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0417,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0418,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0419,5,Grover's Algorithm,Review Grover's Algorithm fundamentals,review_weak_topic,100.0
+LEARNER_0420,5,Shor's Algorithm,Practice targeted exercises in Shor's Algorithm,practice_developing_topic,84.12
+LEARNER_0421,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0422,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0423,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0424,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0425,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0426,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0427,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0428,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0429,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0430,5,Grover's Algorithm,Attempt an advanced quantum algorithm challenge in Grover's Algorithm,attempt_challenge,54.4
+LEARNER_0431,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0432,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0433,5,Superposition,Reinforce prerequisite concept: Superposition,reinforce_prerequisite,100.0
+LEARNER_0434,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0435,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0436,5,Grover's Algorithm,Attempt an advanced quantum algorithm challenge in Grover's Algorithm,attempt_challenge,54.38
+LEARNER_0437,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0438,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0439,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0440,5,Grover's Algorithm,Attempt an advanced quantum algorithm challenge in Grover's Algorithm,attempt_challenge,54.52
+LEARNER_0441,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0442,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0443,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0444,5,Bell States,Review Bell States fundamentals,review_weak_topic,100.0
+LEARNER_0445,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0446,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0447,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,100.0
+LEARNER_0448,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0449,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0450,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,50.5
+LEARNER_0451,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0452,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0453,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0454,5,Grover's Algorithm,Attempt an advanced quantum algorithm challenge in Grover's Algorithm,attempt_challenge,51.67
+LEARNER_0455,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0456,5,Grover's Algorithm,Attempt an advanced quantum algorithm challenge in Grover's Algorithm,attempt_challenge,56.0
+LEARNER_0457,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0458,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0459,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,100.0
+LEARNER_0460,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,55.62
+LEARNER_0461,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0462,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0463,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0464,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0465,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0466,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0467,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,100.0
+LEARNER_0468,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0469,5,Grover's Algorithm,Review Grover's Algorithm fundamentals,review_weak_topic,100.0
+LEARNER_0470,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0471,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0472,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0473,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0474,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0475,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0476,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0477,5,Grover's Algorithm,Practice targeted exercises in Grover's Algorithm,practice_developing_topic,81.4
+LEARNER_0478,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0479,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0480,5,Bell States,Review Bell States fundamentals,review_weak_topic,100.0
+LEARNER_0481,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,100.0
+LEARNER_0482,5,Shor's Algorithm,Review Shor's Algorithm fundamentals,review_weak_topic,100.0
+LEARNER_0483,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0484,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0485,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0486,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0487,5,Qubits,Reinforce prerequisite concept: Qubits,reinforce_prerequisite,100.0
+LEARNER_0488,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0489,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0490,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0491,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,99.95
+LEARNER_0492,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0493,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0494,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0495,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0496,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0497,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,52.5
+LEARNER_0498,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0499,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0500,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0501,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0502,5,Bell States,Review Bell States fundamentals,review_weak_topic,100.0
+LEARNER_0503,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0504,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0505,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0506,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0507,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0508,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0509,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0510,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0511,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0512,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,50.52
+LEARNER_0513,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0514,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0515,5,Bell States,Review Bell States fundamentals,review_weak_topic,100.0
+LEARNER_0516,5,Shor's Algorithm,Review Shor's Algorithm fundamentals,review_weak_topic,100.0
+LEARNER_0517,5,Qubits,Reinforce prerequisite concept: Qubits,reinforce_prerequisite,100.0
+LEARNER_0518,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0519,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0520,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0521,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0522,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0523,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0524,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0525,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0526,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0527,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0528,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0529,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,96.88
+LEARNER_0530,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0531,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0532,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0533,5,Quantum Circuits,Practice targeted exercises in Quantum Circuits,practice_developing_topic,77.92
+LEARNER_0534,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0535,5,Bell States,Review Bell States fundamentals,review_weak_topic,100.0
+LEARNER_0536,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0537,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0538,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0539,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0540,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0541,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0542,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0543,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0544,5,Shor's Algorithm,Review Shor's Algorithm fundamentals,review_weak_topic,100.0
+LEARNER_0545,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0546,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0547,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0548,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0549,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0550,5,Entanglement,Practice targeted exercises in Entanglement,practice_developing_topic,83.53
+LEARNER_0551,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,55.4
+LEARNER_0552,5,Grover's Algorithm,Practice targeted exercises in Grover's Algorithm,practice_developing_topic,78.12
+LEARNER_0553,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0554,5,Shor's Algorithm,Practice targeted exercises in Shor's Algorithm,practice_developing_topic,82.45
+LEARNER_0555,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0556,5,Bell States,Review Bell States fundamentals,review_weak_topic,100.0
+LEARNER_0557,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0558,5,Superposition,Reinforce prerequisite concept: Superposition,reinforce_prerequisite,100.0
+LEARNER_0559,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0560,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0561,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0562,5,Qubits,Reinforce prerequisite concept: Qubits,reinforce_prerequisite,100.0
+LEARNER_0563,5,Grover's Algorithm,Review Grover's Algorithm fundamentals,review_weak_topic,100.0
+LEARNER_0564,5,Grover's Algorithm,Attempt an advanced quantum algorithm challenge in Grover's Algorithm,attempt_challenge,56.17
+LEARNER_0565,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0566,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0567,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0568,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0569,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0570,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0571,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0572,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0573,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0574,5,Quantum Circuits,Review Quantum Circuits fundamentals,review_weak_topic,100.0
+LEARNER_0575,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0576,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0577,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0578,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0579,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0580,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0581,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0582,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0583,5,Superposition,Reinforce prerequisite concept: Superposition,reinforce_prerequisite,100.0
+LEARNER_0584,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0585,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,97.25
+LEARNER_0586,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0587,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0588,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0589,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0590,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0591,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0592,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,55.77
+LEARNER_0593,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0594,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0595,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,100.0
+LEARNER_0596,5,Quantum Circuits,Review Quantum Circuits fundamentals,review_weak_topic,100.0
+LEARNER_0597,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0598,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0599,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0600,5,Grover's Algorithm,Attempt an advanced quantum algorithm challenge in Grover's Algorithm,attempt_challenge,54.1
+LEARNER_0601,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0602,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0603,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,51.05
+LEARNER_0604,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0605,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0606,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0607,5,Shor's Algorithm,Practice targeted exercises in Shor's Algorithm,practice_developing_topic,81.33
+LEARNER_0608,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,55.45
+LEARNER_0609,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0610,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0611,5,Grover's Algorithm,Review Grover's Algorithm fundamentals,review_weak_topic,100.0
+LEARNER_0612,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0613,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,56.15
+LEARNER_0614,5,Superposition,Reinforce prerequisite concept: Superposition,reinforce_prerequisite,100.0
+LEARNER_0615,5,Superposition,Reinforce prerequisite concept: Superposition,reinforce_prerequisite,100.0
+LEARNER_0616,5,Bell States,Review Bell States fundamentals,review_weak_topic,100.0
+LEARNER_0617,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0618,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0619,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,100.0
+LEARNER_0620,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0621,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0622,5,Shor's Algorithm,Review Shor's Algorithm fundamentals,review_weak_topic,100.0
+LEARNER_0623,5,Shor's Algorithm,Practice targeted exercises in Shor's Algorithm,practice_developing_topic,84.62
+LEARNER_0624,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,99.92
+LEARNER_0625,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0626,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0627,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0628,5,Grover's Algorithm,Attempt an advanced quantum algorithm challenge in Grover's Algorithm,attempt_challenge,55.33
+LEARNER_0629,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0630,5,Grover's Algorithm,Review Grover's Algorithm fundamentals,review_weak_topic,100.0
+LEARNER_0631,5,Grover's Algorithm,Review Grover's Algorithm fundamentals,review_weak_topic,90.03
+LEARNER_0632,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0633,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,100.0
+LEARNER_0634,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,54.9
+LEARNER_0635,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0636,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0637,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0638,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0639,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0640,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0641,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0642,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,98.3
+LEARNER_0643,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0644,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0645,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0646,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0647,5,Superposition,Practice targeted exercises in Superposition,practice_developing_topic,76.72
+LEARNER_0648,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0649,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0650,5,Quantum Circuits,Review Quantum Circuits fundamentals,review_weak_topic,100.0
+LEARNER_0651,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0652,5,Entanglement,Practice targeted exercises in Entanglement,practice_developing_topic,82.75
+LEARNER_0653,5,Superposition,Reinforce prerequisite concept: Superposition,reinforce_prerequisite,98.03
+LEARNER_0654,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0655,5,Superposition,Reinforce prerequisite concept: Superposition,reinforce_prerequisite,100.0
+LEARNER_0656,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0657,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0658,5,Grover's Algorithm,Practice targeted exercises in Grover's Algorithm,practice_developing_topic,83.1
+LEARNER_0659,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0660,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0661,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0662,5,Grover's Algorithm,Slow down and reinforce core fundamentals starting with Grover's Algorithm,slow_down_reinforce,97.55
+LEARNER_0663,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0664,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0665,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0666,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0667,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0668,5,Bell States,Review Bell States fundamentals,review_weak_topic,100.0
+LEARNER_0669,5,Grover's Algorithm,Practice targeted exercises in Grover's Algorithm,practice_developing_topic,82.12
+LEARNER_0670,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0671,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0672,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,52.98
+LEARNER_0673,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0674,5,Grover's Algorithm,Attempt an advanced quantum algorithm challenge in Grover's Algorithm,attempt_challenge,51.62
+LEARNER_0675,5,Qubits,Reinforce prerequisite concept: Qubits,reinforce_prerequisite,100.0
+LEARNER_0676,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0677,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,100.0
+LEARNER_0678,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0679,5,Shor's Algorithm,Practice targeted exercises in Shor's Algorithm,practice_developing_topic,81.42
+LEARNER_0680,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0681,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0682,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0683,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0684,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0685,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0686,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0687,5,Grover's Algorithm,Attempt an advanced quantum algorithm challenge in Grover's Algorithm,attempt_challenge,55.17
+LEARNER_0688,5,Quantum Circuits,Review Quantum Circuits fundamentals,review_weak_topic,100.0
+LEARNER_0689,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0690,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0691,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0692,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0693,5,Qubits,Reinforce prerequisite concept: Qubits,reinforce_prerequisite,100.0
+LEARNER_0694,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0695,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0696,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0697,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,100.0
+LEARNER_0698,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0699,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0700,5,Superposition,Reinforce prerequisite concept: Superposition,reinforce_prerequisite,100.0
+LEARNER_0701,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0702,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0703,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,54.55
+LEARNER_0704,5,Superposition,Reinforce prerequisite concept: Superposition,reinforce_prerequisite,100.0
+LEARNER_0705,5,Quantum Circuits,Review Quantum Circuits fundamentals,review_weak_topic,100.0
+LEARNER_0706,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0707,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0708,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0709,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0710,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,96.55
+LEARNER_0711,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0712,5,Grover's Algorithm,Attempt an advanced quantum algorithm challenge in Grover's Algorithm,attempt_challenge,52.38
+LEARNER_0713,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0714,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0715,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0716,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,52.0
+LEARNER_0717,5,Grover's Algorithm,Attempt an advanced quantum algorithm challenge in Grover's Algorithm,attempt_challenge,53.85
+LEARNER_0718,5,Shor's Algorithm,Slow down and reinforce core fundamentals starting with Shor's Algorithm,slow_down_reinforce,99.58
+LEARNER_0719,5,Grover's Algorithm,Practice targeted exercises in Grover's Algorithm,practice_developing_topic,77.45
+LEARNER_0720,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0721,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0722,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0723,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0724,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0725,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0726,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0727,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,99.0
+LEARNER_0728,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,99.03
+LEARNER_0729,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0730,5,Shor's Algorithm,Practice targeted exercises in Shor's Algorithm,practice_developing_topic,81.42
+LEARNER_0731,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0732,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0733,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0734,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0735,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0736,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0737,5,Grover's Algorithm,Attempt an advanced quantum algorithm challenge in Grover's Algorithm,attempt_challenge,55.3
+LEARNER_0738,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0739,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0740,5,Grover's Algorithm,Attempt an advanced quantum algorithm challenge in Grover's Algorithm,attempt_challenge,53.4
+LEARNER_0741,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0742,5,Superposition,Reinforce prerequisite concept: Superposition,reinforce_prerequisite,100.0
+LEARNER_0743,5,Quantum Measurement,Reinforce prerequisite concept: Quantum Measurement,reinforce_prerequisite,100.0
+LEARNER_0744,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0745,5,Qubits,Reinforce prerequisite concept: Qubits,reinforce_prerequisite,100.0
+LEARNER_0746,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,98.03
+LEARNER_0747,5,Shor's Algorithm,Practice targeted exercises in Shor's Algorithm,practice_developing_topic,81.72
+LEARNER_0748,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,55.15
+LEARNER_0749,5,Bell States,Review Bell States fundamentals,review_weak_topic,100.0
+LEARNER_0750,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0751,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0752,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0753,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0754,5,Bell States,Review Bell States fundamentals,review_weak_topic,100.0
+LEARNER_0755,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0756,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0757,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0758,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0759,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0760,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0761,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0762,5,Bell States,Practice targeted exercises in Bell States,practice_developing_topic,77.03
+LEARNER_0763,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,55.88
+LEARNER_0764,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0765,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0766,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0767,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0768,5,Quantum Circuits,Review Quantum Circuits fundamentals,review_weak_topic,100.0
+LEARNER_0769,5,Shor's Algorithm,Review Shor's Algorithm fundamentals,review_weak_topic,90.67
+LEARNER_0770,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,98.95
+LEARNER_0771,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0772,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0773,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0774,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0775,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0776,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0777,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0778,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0779,5,Bell States,Review Bell States fundamentals,review_weak_topic,90.15
+LEARNER_0780,5,Quantum Circuits,Review Quantum Circuits fundamentals,review_weak_topic,100.0
+LEARNER_0781,5,Quantum Measurement,Reinforce prerequisite concept: Quantum Measurement,reinforce_prerequisite,100.0
+LEARNER_0782,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0783,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0784,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,97.17
+LEARNER_0785,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0786,5,Qubits,Reinforce prerequisite concept: Qubits,reinforce_prerequisite,100.0
+LEARNER_0787,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0788,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0789,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0790,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0791,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0792,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0793,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,100.0
+LEARNER_0794,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0795,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0796,5,Quantum Measurement,Reinforce prerequisite concept: Quantum Measurement,reinforce_prerequisite,100.0
+LEARNER_0797,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0798,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0799,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0800,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0801,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0802,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,96.78
+LEARNER_0803,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0804,5,Bell States,Review Bell States fundamentals,review_weak_topic,100.0
+LEARNER_0805,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0806,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0807,5,Quantum Circuits,Review Quantum Circuits fundamentals,review_weak_topic,100.0
+LEARNER_0808,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0809,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0810,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0811,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0812,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0813,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0814,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0815,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0816,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0817,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0818,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,53.9
+LEARNER_0819,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0820,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0821,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0822,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0823,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0824,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0825,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0826,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0827,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0828,5,Shor's Algorithm,Practice targeted exercises in Shor's Algorithm,practice_developing_topic,82.05
+LEARNER_0829,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0830,5,Qubits,Reinforce prerequisite concept: Qubits,reinforce_prerequisite,100.0
+LEARNER_0831,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0832,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0833,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0834,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0835,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0836,5,Grover's Algorithm,Attempt an advanced quantum algorithm challenge in Grover's Algorithm,attempt_challenge,50.0
+LEARNER_0837,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0838,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0839,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0840,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,97.38
+LEARNER_0841,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0842,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0843,5,Shor's Algorithm,Review Shor's Algorithm fundamentals,review_weak_topic,93.88
+LEARNER_0844,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0845,5,Grover's Algorithm,Practice targeted exercises in Grover's Algorithm,practice_developing_topic,82.53
+LEARNER_0846,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0847,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0848,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,54.65
+LEARNER_0849,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0850,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,99.47
+LEARNER_0851,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0852,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0853,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0854,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0855,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0856,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0857,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0858,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0859,5,Grover's Algorithm,Attempt an advanced quantum algorithm challenge in Grover's Algorithm,attempt_challenge,53.92
+LEARNER_0860,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_0861,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0862,5,Grover's Algorithm,Practice targeted exercises in Grover's Algorithm,practice_developing_topic,81.62
+LEARNER_0863,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0864,5,Superposition,Reinforce prerequisite concept: Superposition,reinforce_prerequisite,100.0
+LEARNER_0865,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0866,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,100.0
+LEARNER_0867,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0868,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0869,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,97.38
+LEARNER_0870,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,50.1
+LEARNER_0871,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,100.0
+LEARNER_0872,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0873,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0874,5,Qubits,Reinforce prerequisite concept: Qubits,reinforce_prerequisite,100.0
+LEARNER_0875,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0876,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0877,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0878,5,Entanglement,Attempt an advanced quantum algorithm challenge in Entanglement,attempt_challenge,56.08
+LEARNER_0879,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0880,5,Shor's Algorithm,Practice targeted exercises in Shor's Algorithm,practice_developing_topic,82.92
+LEARNER_0881,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0882,5,Quantum Measurement,Reinforce prerequisite concept: Quantum Measurement,reinforce_prerequisite,100.0
+LEARNER_0883,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0884,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0885,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0886,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0887,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0888,5,Bell States,Review Bell States fundamentals,review_weak_topic,100.0
+LEARNER_0889,5,Entanglement,Practice targeted exercises in Entanglement,practice_developing_topic,82.03
+LEARNER_0890,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0891,5,Bell States,Review Bell States fundamentals,review_weak_topic,100.0
+LEARNER_0892,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0893,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0894,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0895,5,Shor's Algorithm,Practice targeted exercises in Shor's Algorithm,practice_developing_topic,83.53
+LEARNER_0896,5,Bell States,Review Bell States fundamentals,review_weak_topic,100.0
+LEARNER_0897,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0898,5,Shor's Algorithm,Practice targeted exercises in Shor's Algorithm,practice_developing_topic,81.85
+LEARNER_0899,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,100.0
+LEARNER_0900,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0901,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0902,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0903,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0904,5,Quantum Circuits,Review Quantum Circuits fundamentals,review_weak_topic,100.0
+LEARNER_0905,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0906,5,Quantum Circuits,Practice targeted exercises in Quantum Circuits,practice_developing_topic,77.0
+LEARNER_0907,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0908,5,Grover's Algorithm,Review Grover's Algorithm fundamentals,review_weak_topic,100.0
+LEARNER_0909,5,Grover's Algorithm,Review Grover's Algorithm fundamentals,review_weak_topic,100.0
+LEARNER_0910,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0911,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0912,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0913,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0914,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0915,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0916,5,Grover's Algorithm,Attempt an advanced quantum algorithm challenge in Grover's Algorithm,attempt_challenge,54.75
+LEARNER_0917,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0918,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0919,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0920,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0921,5,Shor's Algorithm,Review Shor's Algorithm fundamentals,review_weak_topic,100.0
+LEARNER_0922,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0923,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0924,5,Quantum Gates,Practice targeted exercises in Quantum Gates,practice_developing_topic,76.58
+LEARNER_0925,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0926,5,Grover's Algorithm,Review Grover's Algorithm fundamentals,review_weak_topic,100.0
+LEARNER_0927,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0928,5,Shor's Algorithm,Practice targeted exercises in Shor's Algorithm,practice_developing_topic,81.88
+LEARNER_0929,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0930,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0931,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0932,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0933,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0934,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0935,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0936,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0937,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0938,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0939,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0940,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0941,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0942,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0943,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0944,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,100.0
+LEARNER_0945,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0946,5,Bell States,Practice targeted exercises in Bell States,practice_developing_topic,76.85
+LEARNER_0947,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0948,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0949,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0950,5,Shor's Algorithm,Practice targeted exercises in Shor's Algorithm,practice_developing_topic,82.1
+LEARNER_0951,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0952,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0953,5,Quantum Circuits,Review Quantum Circuits fundamentals,review_weak_topic,100.0
+LEARNER_0954,5,Qubits,Reinforce prerequisite concept: Qubits,reinforce_prerequisite,100.0
+LEARNER_0955,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0956,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0957,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0958,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0959,5,Grover's Algorithm,Slow down and reinforce core fundamentals starting with Grover's Algorithm,slow_down_reinforce,100.0
+LEARNER_0960,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,96.4
+LEARNER_0961,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0962,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0963,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0964,5,Quantum Gates,Practice targeted exercises in Quantum Gates,practice_developing_topic,82.33
+LEARNER_0965,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0966,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0967,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,95.35
+LEARNER_0968,5,Superposition,Reinforce prerequisite concept: Superposition,reinforce_prerequisite,100.0
+LEARNER_0969,5,Quantum Circuits,Reinforce prerequisite concept: Quantum Circuits,reinforce_prerequisite,100.0
+LEARNER_0970,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0971,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0972,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0973,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0974,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0975,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,100.0
+LEARNER_0976,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,99.58
+LEARNER_0977,5,Entanglement,Reinforce prerequisite concept: Entanglement,reinforce_prerequisite,100.0
+LEARNER_0978,5,Grover's Algorithm,Reinforce prerequisite concept: Grover's Algorithm,reinforce_prerequisite,100.0
+LEARNER_0979,5,Grover's Algorithm,Practice targeted exercises in Grover's Algorithm,practice_developing_topic,82.97
+LEARNER_0980,5,Grover's Algorithm,Practice targeted exercises in Grover's Algorithm,practice_developing_topic,81.53
+LEARNER_0981,5,Grover's Algorithm,Attempt an advanced quantum algorithm challenge in Grover's Algorithm,attempt_challenge,55.95
+LEARNER_0982,5,Bell States,Reinforce prerequisite concept: Bell States,reinforce_prerequisite,100.0
+LEARNER_0983,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0984,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0985,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0986,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0987,5,Shor's Algorithm,Attempt an advanced quantum algorithm challenge in Shor's Algorithm,attempt_challenge,53.12
+LEARNER_0988,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0989,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0990,5,Superposition,Reinforce prerequisite concept: Superposition,reinforce_prerequisite,100.0
+LEARNER_0991,5,Quantum Gates,Reinforce prerequisite concept: Quantum Gates,reinforce_prerequisite,100.0
+LEARNER_0992,5,Quantum Gates,Practice targeted exercises in Quantum Gates,practice_developing_topic,76.67
+LEARNER_0993,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0994,5,Entanglement,Review Entanglement fundamentals,review_weak_topic,100.0
+LEARNER_0995,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0996,5,Superposition,Review Superposition fundamentals,review_weak_topic,100.0
+LEARNER_0997,5,Qubits,Review Qubits fundamentals,review_weak_topic,100.0
+LEARNER_0998,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0
+LEARNER_0999,5,Quantum Measurement,Review Quantum Measurement fundamentals,review_weak_topic,100.0
+LEARNER_1000,5,Quantum Gates,Review Quantum Gates fundamentals,review_weak_topic,100.0

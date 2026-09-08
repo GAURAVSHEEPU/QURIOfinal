@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { ArrowRight, Gamepad2, User } from 'lucide-react';
 
 import AtlasLogo from '../landing/AtlasLogo';
+import AccountMenu from '../auth/AccountMenu';
 
 /* ══════════════════════════════════════════════════════════════
    ATLAS NAV — the site header, shared by every page.
@@ -13,7 +14,7 @@ import AtlasLogo from '../landing/AtlasLogo';
    link, so it is both visually obvious and correct for a11y.
    ══════════════════════════════════════════════════════════════ */
 
-export type NavPageId = 'home' | 'roadmap' | 'qubit' | 'profile';
+export type NavPageId = 'home' | 'roadmap' | 'qubit' | 'circuit' | 'profile' | 'login';
 
 const CURRENT_PILL = {
   color: '#ED6A5A',
@@ -29,12 +30,12 @@ interface Item {
 }
 
 const ITEMS: Item[] = [
-  { label: 'Get Started', hash: '#start' },
+  // { label: 'Get Started', hash: '#start' },
   { label: 'Atlas Entries', hash: '#entries' },
   { label: 'Interactives', hash: '#interactives' },
   { id: 'roadmap', label: 'Roadmap', href: '/roadmap' },
   { id: 'qubit', label: 'Qurio Qubit', href: '/qubit' },
-  { label: 'Circuit Studio', href: '/circuit' },
+  { label: 'Circuit Studio', id: 'circuit', href: '/circuit' },
   { label: 'AI Tutor', href: '/ai-tutor' },
 ];
 
@@ -62,7 +63,10 @@ export default function AtlasNav({ current }: AtlasNavProps) {
       >
         <AtlasLogo size={42} showText />
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
+        {/* Gap and link sizing live in .atlas-nav-cluster rather than inline,
+            because they tighten on narrower laptops — the account chip was
+            enough extra width to break this row in two at 1360px. */}
+        <div className="atlas-nav-cluster">
           {!onHome && (
             <Link href="/" className="atlas-nav-link">
               Home
@@ -97,44 +101,50 @@ export default function AtlasNav({ current }: AtlasNavProps) {
             );
           })}
 
-          <div style={{ width: 1, height: 24, background: 'rgba(34, 37, 42, 0.15)', margin: '0 8px' }} />
+          {/* On /login itself the account controls and the sign-up CTA are
+              all pointing at the page you are already on, so the header
+              drops back to plain navigation. */}
+          {current !== 'login' && (
+            <>
+              <div
+                style={{ width: 1, height: 24, background: 'rgba(34, 37, 42, 0.15)', margin: '0 8px' }}
+              />
 
-          {current === 'profile' ? (
-            <span
-              className="atlas-nav-link"
-              aria-current="page"
-              style={{ ...CURRENT_PILL, display: 'inline-flex', alignItems: 'center', gap: 6 }}
-            >
-              <User size={14} /> My Progress
-            </span>
-          ) : (
-            <Link
-              href="/profile"
-              className="atlas-nav-link"
-              style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}
-            >
-              <User size={14} /> My Progress
-            </Link>
-          )}
+              {current === 'profile' ? (
+                <span
+                  className="atlas-nav-link"
+                  aria-current="page"
+                  style={{ ...CURRENT_PILL, display: 'inline-flex', alignItems: 'center', gap: 6 }}
+                >
+                  <User size={14} /> My Progress
+                </span>
+              ) : (
+                <Link
+                  href="/profile"
+                  className="atlas-nav-link"
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}
+                >
+                  <User size={14} /> My Progress
+                </Link>
+              )}
 
-          {onHome && (
-            <Link href="/login" className="btn-atlas-ghost" style={{ padding: '8px 18px', fontSize: 14 }}>
-              Sign In
-            </Link>
-          )}
+              {/* Signed out — and during prerender — this is the Sign In button. */}
+              <AccountMenu />
 
-          {current === 'qubit' ? (
-            <Link href="/roadmap" className="btn-atlas-coral" style={{ padding: '9px 20px', fontSize: 14 }}>
-              Study a module <ArrowRight size={14} />
-            </Link>
-          ) : current === 'roadmap' ? (
-            <Link href="/qubit" className="btn-atlas-coral" style={{ padding: '9px 20px', fontSize: 14 }}>
-              <Gamepad2 size={14} /> Play the games
-            </Link>
-          ) : (
-            <Link href="/dashboard" className="btn-atlas-coral" style={{ padding: '9px 20px', fontSize: 14 }}>
-              Get Started Free <ArrowRight size={14} />
-            </Link>
+              {current === 'qubit' ? (
+                <Link href="/roadmap" className="btn-atlas-coral" style={{ padding: '9px 20px', fontSize: 14 }}>
+                  Study a module <ArrowRight size={14} />
+                </Link>
+              ) : current === 'roadmap' ? (
+                <Link href="/qubit" className="btn-atlas-coral" style={{ padding: '9px 20px', fontSize: 14 }}>
+                  <Gamepad2 size={14} /> Play the games
+                </Link>
+              ) : (
+                <Link href="/login#signup" className="btn-atlas-coral" style={{ padding: '9px 20px', fontSize: 14 }}>
+                  Get Started Free <ArrowRight size={14} />
+                </Link>
+              )}
+            </>
           )}
         </div>
       </div>

@@ -397,7 +397,7 @@ export default function InteractiveSimCard() {
               transition: 'all 0.2s',
             }}
           >
-            <Cpu size={14} /> Circuit Builder <ArrowRight size={14} />
+            <Cpu size={14} /> Circuit Studio <ArrowRight size={14} />
           </Link>
         </div>
       </div>

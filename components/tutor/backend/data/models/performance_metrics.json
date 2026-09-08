@@ -1,0 +1,26 @@
+{
+  "model": "LinearRegression",
+  "target": "overall_score",
+  "baseline_dummy_mean": {
+    "mae": 13.4785,
+    "mse": 268.0914,
+    "rmse": 16.3735,
+    "r2": -0.0002
+  },
+  "model_performance": {
+    "train_metrics": {
+      "mae": 0.0248,
+      "mse": 0.0008,
+      "rmse": 0.0286,
+      "r2": 1.0
+    },
+    "test_metrics": {
+      "mae": 0.0243,
+      "mse": 0.0008,
+      "rmse": 0.0285,
+      "r2": 1.0
+    },
+    "out_of_bounds_predictions_count": 0
+  },
+  "intercept": 63.158
+}

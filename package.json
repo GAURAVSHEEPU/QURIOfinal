@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:backend:tutor": "python components/tutor/backend/main.py",
+    "dev:backend:circuit": "python circuit-backend/main.py",
     "build": "next build",
     "start": "next start"
   },

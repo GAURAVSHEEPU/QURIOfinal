@@ -1,5 +1,6 @@
 import {
   Activity,
+  CircuitBoard,
   Crown,
   EyeOff,
   Footprints,
@@ -15,6 +16,7 @@ import {
   type LucideIcon,
 } from 'lucide-react';
 
+import { CIRCUIT_FLAGS } from '../circuit/circuitData';
 import type { StickmanPose } from '../roadmap/Stickman';
 import type { GameId, Progress } from './progressStore';
 
@@ -27,7 +29,8 @@ import type { GameId, Progress } from './progressStore';
 
    Type-only imports from ./progressStore keep this a leaf at
    runtime — progressStore imports BADGES from here, so a value
-   import in the other direction would be a cycle.
+   import in the other direction would be a cycle. ../circuit is
+   safe to import for real: it is itself a leaf.
    ══════════════════════════════════════════════════════════════ */
 
 export interface GameSpec {
@@ -266,6 +269,13 @@ const META_BADGES: BadgeSpec[] = [
     hint: 'Clear three games without leaving the page.',
     icon: Zap,
     test: (_p, ctx) => ctx.sessionClears >= 3,
+  },
+  {
+    id: 'bc-architect',
+    name: 'Circuit Architect',
+    hint: 'Clear all five Circuit Studio challenges.',
+    icon: CircuitBoard,
+    test: (p) => CIRCUIT_FLAGS.every((f) => p.flags.includes(f)),
   },
 ];
 

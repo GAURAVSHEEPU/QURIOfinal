@@ -1,0 +1,431 @@
+# Test Checklist
+
+## Environment
+- [x] Python environment works
+  - **Command used:** `python -u scratch/validate_phase0.py`
+  - **Expected result:** Python 3.10+ executes validation script cleanly.
+  - **Actual result:** Command exited with code 0.
+- [x] Dependencies install successfully
+  - **Command used:** `python -c "import numpy, pandas, matplotlib, sklearn, fastapi, uvicorn, pydantic, dotenv, joblib; print('OK')"`
+  - **Expected result:** All 9 core packages import without `ImportError`.
+  - **Actual result:** All modules imported successfully.
+
+## Project Structure
+- [x] Required directories exist
+  - **Command used:** `python scratch/validate_phase0.py`
+  - **Expected result:** `data/`, `models/`, `src/`, `tests/`, `docs/` exist.
+  - **Actual result:** Directories exist and structure matches specification.
+- [x] Required documentation exists
+  - **Command used:** `python scratch/validate_phase0.py`
+  - **Expected result:** PRD, ARCHITECTURE, RULES, PHASES, DESIGN, MEMORY exist.
+  - **Actual result:** All documentation files exist with valid sizes.
+
+## Data Generation (Phase 1A)
+- [x] Curriculum JSON is valid
+  - **Command used:** `python scratch/validate_phase0.py`
+  - **Expected result:** `data/curriculum/quantum_topics.json` parses as valid JSON with 9 topics containing required keys.
+  - **Actual result:** Successfully parsed 9 valid quantum topics (Qubits to Shor's Algorithm).
+- [x] Data generation script runs successfully
+  - **Command used:** `python -u src/data/generate_data.py`
+  - **Expected result:** Script generates synthetic telemetry and outputs CSV cleanly.
+  - **Actual result:** Exited with code 0, creating `data/raw/learner_data.csv`.
+- [x] Dataset loads without errors
+  - **Command used:** `python -u scratch/verify_phase1a.py`
+  - **Expected result:** Pandas `read_csv` loads `learner_data.csv` without parsing errors.
+  - **Actual result:** Loaded 1,000 rows cleanly.
+- [x] Row count is approximately 1000
+  - **Command used:** `python -u scratch/verify_phase1a.py`
+  - **Expected result:** Exactly 1,000 rows.
+  - **Actual result:** 1,000 rows generated.
+- [x] `learner_id` is unique across all records
+  - **Command used:** `assert df["learner_id"].nunique() == len(df)`
+  - **Expected result:** 1,000 unique IDs (`LEARNER_0001` to `LEARNER_1000`).
+  - **Actual result:** 1,000 unique IDs verified.
+- [x] All required columns exist
+  - **Command used:** Verified 22 feature & label columns.
+  - **Expected result:** 22 expected columns present.
+  - **Actual result:** All 22 columns present.
+- [x] Numerical feature value ranges are valid
+  - **Command used:** Range assertions in `scratch/verify_phase1a.py`.
+  - **Expected result:** Scores $\in [0, 100]$, attempts $\in [1, 10]$, errors $\in [0, 20]$, time $\in [5, 180]$, modules $\in [0, 9]$.
+  - **Actual result:** All features strictly bounded within specified ranges.
+- [x] Zero personal information (PII) present
+  - **Command used:** Keyword audit across all columns for name/email/phone/address/SSN.
+  - **Expected result:** 0 PII columns found.
+  - **Actual result:** 0 PII columns found.
+
+## Data Preprocessing & Scaling (Phase 1B)
+- [x] Raw CSV loads successfully
+  - **Command used:** `python -u scratch/verify_phase1b.py`
+  - **Expected result:** `load_raw_data()` loads 1,000 records.
+  - **Actual result:** Loaded 1,000 records cleanly.
+- [x] Expected columns exist
+  - **Command used:** `python -u scratch/verify_phase1b.py`
+  - **Expected result:** All 22 expected columns present in DataFrame.
+  - **Actual result:** Verified all expected columns exist.
+- [x] `learner_id` excluded from features
+  - **Command used:** `assert 'learner_id' not in X_df.columns`
+  - **Expected result:** True.
+  - **Actual result:** Excluded from $X\_df$.
+- [x] `overall_score` excluded from features
+  - **Command used:** `assert 'overall_score' not in X_df.columns`
+  - **Expected result:** True.
+  - **Actual result:** Excluded from $X\_df$.
+- [x] `learning_risk` excluded from features
+  - **Command used:** `assert 'learning_risk' not in X_df.columns`
+  - **Expected result:** True.
+  - **Actual result:** Excluded from $X\_df$.
+- [x] `skill_level` excluded from features
+  - **Command used:** `assert 'skill_level' not in X_df.columns`
+  - **Expected result:** True.
+  - **Actual result:** Excluded from $X\_df$.
+- [x] `age_group` encoded via OneHotEncoder
+  - **Command used:** `python -u scratch/verify_phase1b.py`
+  - **Expected result:** Encoded into 3 binary columns ("18-24", "25-34", "35+").
+  - **Actual result:** One-hot encoded successfully into 3 columns.
+- [x] Numerical features scaled via StandardScaler
+  - **Command used:** `assert np.allclose(means, 0.0, atol=1e-1) and np.allclose(stds, 1.0, atol=1e-1)`
+  - **Expected result:** Means $\approx 0.0$, standard deviations $\approx 1.0$.
+  - **Actual result:** Verified numerical features scaled to $\mu=0, \sigma=1$.
+- [x] Preprocessing produces expected output shape
+  - **Command used:** `assert X_trans.shape == (1000, 20)`
+  - **Expected result:** Matrix shape `(1000, 20)` (17 numerical + 3 categorical).
+  - **Actual result:** Matrix shape `(1000, 20)` verified.
+- [x] No NaN values remain after transformation
+  - **Command used:** `assert not np.isnan(X_trans).any()`
+  - **Expected result:** 0 NaNs.
+  - **Actual result:** 0 NaNs found in transformed feature matrix.
+- [x] `preprocessor.joblib` successfully created
+  - **Command used:** `assert os.path.exists('data/processed/preprocessor.joblib')`
+  - **Expected result:** File exists on disk in `data/processed/`.
+  - **Actual result:** Persisted file exists (4,654 bytes).
+- [x] Saved preprocessor loads successfully
+  - **Command used:** `joblib.load('data/processed/preprocessor.joblib')`
+  - **Expected result:** Loaded `ColumnTransformer` object without errors.
+  - **Actual result:** Object loaded cleanly.
+- [x] Inference sample batch transformed identically
+  - **Command used:** `assert np.allclose(sample_trans, X_trans[:5])`
+  - **Expected result:** Loaded preprocessor transforms sample inputs identically.
+  - **Actual result:** Identical transformation verified.
+- [x] Zero target columns enter input feature set $X$
+  - **Command used:** `scratch/verify_phase1b.py` audit pass.
+  - **Expected result:** 0 target columns in feature set.
+  - **Actual result:** 0 target columns present in $X\_df$.
+
+## Exploratory Data Analysis (Phase 1C)
+- [x] Raw dataset loads successfully
+  - **Command used:** `python -u scratch/verify_phase1c.py`
+  - **Expected result:** `load_raw_dataset()` reads 1,000 records.
+  - **Actual result:** 1,000 records loaded cleanly.
+- [x] Expected columns exist
+  - **Command used:** Verified 22 columns.
+  - **Expected result:** All 22 columns present.
+  - **Actual result:** Verified all expected columns exist.
+- [x] Dataset row count is correct
+  - **Command used:** `assert len(df) == 1000`
+  - **Expected result:** 1,000 rows.
+  - **Actual result:** 1,000 rows verified.
+- [x] No unexpected missing values present
+  - **Command used:** `assert df.isnull().sum().sum() == 0`
+  - **Expected result:** 0 missing values.
+  - **Actual result:** 0 missing values present.
+- [x] No duplicate learner IDs exist
+  - **Command used:** `assert df.duplicated(subset=['learner_id']).sum() == 0`
+  - **Expected result:** 0 duplicates.
+  - **Actual result:** 0 duplicate learner IDs found.
+- [x] All score ranges are valid
+  - **Command used:** Range assertions in `scratch/verify_phase1c.py`.
+  - **Expected result:** Scores $\in [0, 100]$.
+  - **Actual result:** All score values strictly bounded $[0, 100]$.
+- [x] Target distributions calculated
+  - **Command used:** `analyze_target_distributions(df)`
+  - **Expected result:** Overall score stats, Risk counts ({0: 676, 1: 324}), Skill counts ({Intermediate: 428, Beginner: 389, Advanced: 183}).
+  - **Actual result:** Calculated target distributions.
+- [x] Topic summary generated successfully
+  - **Command used:** `analyze_topic_performance(df, curriculum, output_dir)`
+  - **Expected result:** `data/analysis/topic_performance_summary.csv` created with 9 topic rows.
+  - **Actual result:** File created and verified.
+- [x] Correlation matrix generated successfully
+  - **Command used:** `compute_correlation_matrix(df, output_dir)`
+  - **Expected result:** `data/analysis/correlation_matrix.csv` created (18x18 matrix).
+  - **Actual result:** Square correlation matrix exported.
+- [x] Expected analysis output files exist
+  - **Command used:** Verification pass over 7 analysis artifacts.
+  - **Expected result:** 3 CSVs + 4 Matplotlib PNG charts exist and non-empty.
+  - **Actual result:** All 7 analysis files present in `data/analysis/`.
+- [x] EDA report exists
+  - **Command used:** `assert os.path.exists('docs/EDA_REPORT.md')`
+  - **Expected result:** Document exists and contains comprehensive report.
+  - **Actual result:** `docs/EDA_REPORT.md` exists (8,769 bytes).
+- [x] Raw dataset remains unchanged
+  - **Command used:** MD5 checksum comparison before and after EDA.
+  - **Expected result:** Initial MD5 hash equals final MD5 hash.
+  - **Actual result:** Hashes matched 100% (raw dataset remained untouched).
+
+## ML-Ready Dataset Preparation (Phase 1D)
+- [x] Raw dataset loads successfully
+  - **Command used:** `python -u scratch/verify_phase1d.py`
+  - **Expected result:** `load_dataset()` loads 1,000 records.
+  - **Actual result:** 1,000 records loaded cleanly.
+- [x] Exactly 1,000 records available
+  - **Command used:** `assert len(raw_df) == 1000`
+  - **Expected result:** 1,000 records.
+  - **Actual result:** 1,000 records verified.
+- [x] Feature/target separation is correct
+  - **Command used:** `separate_features_and_targets(raw_df)`
+  - **Expected result:** 18 feature columns in $X\_df$, 3 target series in $y\_dict$.
+  - **Actual result:** Separated cleanly.
+- [x] `learner_id` absent from model features
+  - **Command used:** `assert 'learner_id' not in X_df.columns`
+  - **Expected result:** True.
+  - **Actual result:** Absent from features.
+- [x] `overall_score` absent from model features
+  - **Command used:** `assert 'overall_score' not in X_df.columns`
+  - **Expected result:** True.
+  - **Actual result:** Absent from features.
+- [x] `learning_risk` absent from model features
+  - **Command used:** `assert 'learning_risk' not in X_df.columns`
+  - **Expected result:** True.
+  - **Actual result:** Absent from features.
+- [x] `skill_level` absent from model features
+  - **Command used:** `assert 'skill_level' not in X_df.columns`
+  - **Expected result:** True.
+  - **Actual result:** Absent from features.
+- [x] Train/test sizes are 800 / 200
+  - **Command used:** `assert len(X_train_df) == 800 and len(X_test_df) == 200`
+  - **Expected result:** 800 train (80%), 200 test (20%).
+  - **Actual result:** Split sizes 800 / 200 verified.
+- [x] No learner IDs overlap between train and test
+  - **Command used:** `assert train_id_set.isdisjoint(test_id_set)`
+  - **Expected result:** True.
+  - **Actual result:** Zero ID overlap detected between train and test partitions.
+- [x] Every original learner appears exactly once
+  - **Command used:** `assert len(train_id_set | test_id_set) == 1000`
+  - **Expected result:** 1,000 unique learners covered.
+  - **Actual result:** 1,000 learners covered.
+- [x] Train/test target alignment is correct
+  - **Command used:** Index matching assertions in `verify_phase1d.py`.
+  - **Expected result:** Target series lengths match $X\_train$ (800) and $X\_test$ (200).
+  - **Actual result:** Target alignment verified.
+- [x] `y_performance` contains correct `overall_score` values
+  - **Command used:** `y_performance_train.csv` & `y_performance_test.csv` check.
+  - **Expected result:** Unscaled continuous float scores.
+  - **Actual result:** Verified correct values.
+- [x] `y_risk` contains correct `learning_risk` values
+  - **Command used:** `y_risk_train.csv` & `y_risk_test.csv` check.
+  - **Expected result:** Binary integers (0 and 1).
+  - **Actual result:** Verified correct values ({0, 1}).
+- [x] `y_skill` contains correct `skill_level` values
+  - **Command used:** `y_skill_train.csv` & `y_skill_test.csv` check.
+  - **Expected result:** Multiclass categories ("Beginner", "Intermediate", "Advanced").
+  - **Actual result:** Verified correct values.
+- [x] Classification targets retain all required classes
+  - **Command used:** Class set assertions in `verify_phase1d.py`.
+  - **Expected result:** All risk and skill classes represented in both train and test.
+  - **Actual result:** All classes retained.
+- [x] Preprocessor is fitted using training data only
+  - **Command used:** `fit_preprocessor(preprocessor, X_train_df)`
+  - **Expected result:** `ml_preprocessor.joblib` fitted strictly on $X\_train\_df$.
+  - **Actual result:** Verified training-only preprocessor fitting.
+- [x] `X_train` transforms successfully
+  - **Command used:** `preprocessor.transform(X_train_df)`
+  - **Expected result:** $800 \times 20$ matrix.
+  - **Actual result:** Transformed successfully.
+- [x] `X_test` transforms successfully
+  - **Command used:** `preprocessor.transform(X_test_df)`
+  - **Expected result:** $200 \times 20$ matrix.
+  - **Actual result:** Transformed successfully.
+- [x] `X_train` and `X_test` have identical feature dimensions
+  - **Command used:** `assert X_train_trans.shape[1] == X_test_trans.shape[1]`
+  - **Expected result:** 20 columns.
+  - **Actual result:** Both matrices have 20 columns.
+- [x] No NaN values remain after transformation
+  - **Command used:** `assert not X_train_trans.isnull().any().any()`
+  - **Expected result:** 0 NaNs.
+  - **Actual result:** 0 NaNs found.
+- [x] Saved `ml_preprocessor.joblib` can be loaded
+  - **Command used:** `joblib.load('data/processed/ml_preprocessor.joblib')`
+  - **Expected result:** ColumnTransformer loaded cleanly.
+  - **Actual result:** Loaded successfully (4,654 bytes).
+- [x] Loaded preprocessor can transform a new sample
+  - **Command used:** `loaded_prep.transform(X_test_df.iloc[:5])`
+  - **Expected result:** Identical $5 \times 20$ transformed numpy matrix.
+  - **Actual result:** Transformed sample identically.
+- [x] Running preparation process again produces same split
+  - **Command used:** Split reproducibility test with `random_state=42`.
+  - **Expected result:** Identical train/test learner ID order.
+  - **Actual result:** 100% deterministic reproducibility verified.
+- [x] No target leakage exists
+  - **Command used:** `verify_phase1d.py` audit pass.
+  - **Expected result:** 0 target columns in feature set.
+  - **Actual result:** Verified zero target leakage.
+
+## Performance Prediction Model (Phase 2A)
+- [x] Train continuous performance prediction model (Linear Regression)
+  - **Command used:** `python -u src/models/performance_model.py`
+  - **Expected result:** Trains `LinearRegression` on $X\_train$ ($800 \times 20$) for continuous target `overall_score`.
+  - **Actual result:** Model trained successfully ($R^2 = 1.0, \text{MAE} = 0.0243$).
+- [x] Evaluate model against Dummy Mean Baseline
+  - **Command used:** `python -u scratch/verify_phase2a.py`
+  - **Expected result:** Model significantly outperforms Dummy Baseline ($\text{MAE} = 13.4785$).
+  - **Actual result:** Verified overwhelming outperformance ($99.8\%$ MAE reduction).
+- [x] Extract and sort regression coefficients
+  - **Command used:** `get_coefficients(model, feature_names)`
+  - **Expected result:** Exports 20 coefficients sorted by absolute magnitude.
+  - **Actual result:** Saved `data/models/performance_coefficients.csv` (`coding_score` $+3.009$, `quiz_score` $+2.820$).
+- [x] Generate diagnostic plots
+  - **Command used:** `generate_plots(y_test, y_pred, plots_dir)`
+  - **Expected result:** Saves scatter plot (`performance_actual_vs_predicted.png`) and residual plot (`performance_residuals.png`).
+  - **Actual result:** Both PNG charts generated and verified non-empty.
+- [x] Persist performance model binary and metrics JSON
+  - **Command used:** `joblib.dump(model, 'data/models/performance_linear_regression.joblib')`
+  - **Expected result:** Joblib binary and JSON payload saved.
+  - **Actual result:** Files persisted and re-loaded cleanly in test suite.
+
+## Learning Risk Prediction Model (Phase 2B)
+- [x] Train binary learning risk prediction model (Logistic Regression)
+  - **Command used:** `python -u src/models/risk_model.py`
+  - **Expected result:** Trains `LogisticRegression(max_iter=1000, random_state=42)` on $X\_train$ ($800 \times 20$) for binary target `learning_risk`.
+  - **Actual result:** Model trained successfully ($\text{Accuracy} = 0.9950, \text{Recall} = 0.9841, \text{F1} = 0.9920$).
+- [x] Evaluate model against Dummy Most-Frequent Baseline
+  - **Command used:** `python -u scratch/verify_phase2b.py`
+  - **Expected result:** Model significantly outperforms Dummy Baseline ($\text{Accuracy} = 0.6850, \text{F1} = 0.0000$).
+  - **Actual result:** Verified outperformance across Accuracy, Precision, Recall, and F1.
+- [x] Verify class probability outputs (`predict_proba`)
+  - **Command used:** `generate_probabilities(model, X_test)`
+  - **Expected result:** Returns $P(\text{On-Track})$ and $P(\text{At-Risk})$ in $[0, 1]$ summing to 1.0.
+  - **Actual result:** Probabilities verified bounded in $[0, 1]$ with row sums $= 1.0$.
+- [x] Extract and sort log-odds coefficients
+  - **Command used:** `get_coefficients(model, feature_names)`
+  - **Expected result:** Exports 20 log-odds coefficients sorted by absolute magnitude.
+  - **Actual result:** Saved `data/models/learning_risk_coefficients.csv` (`quiz_score` $-2.1561$, `coding_score` $-2.0539$, `errors` $+0.6751$).
+- [x] Generate confusion matrix visualization
+  - **Command used:** `generate_plots(cm_array, plots_dir)`
+  - **Expected result:** Saves annotated 2x2 confusion matrix PNG (`learning_risk_confusion_matrix.png`).
+  - **Actual result:** PNG chart generated and verified (41,245 bytes).
+- [x] Persist risk model binary and metrics JSON
+  - **Command used:** `joblib.dump(model, 'data/models/learning_risk_logistic_regression.joblib')`
+  - **Expected result:** Joblib binary and JSON payload saved.
+  - **Actual result:** Files persisted and re-loaded cleanly in test suite.
+
+## Skill Level Classification Models (Phase 2C)
+- [x] Train skill level classification models (Decision Tree & Random Forest)
+  - **Command used:** `python -u src/models/skill_model.py`
+  - **Expected result:** Trains `DecisionTreeClassifier(max_depth=5)` and `RandomForestClassifier(n=100, depth=7)`.
+  - **Actual result:** Both models trained successfully ($\text{DT Acc} = 0.9350, \text{RF Acc} = 0.9450$).
+- [x] Evaluate skill classification models using test set
+  - **Command used:** `python -u scratch/verify_phase2c.py`
+  - **Expected result:** Both models outperform Dummy Baseline ($\text{Acc} = 0.4300, \text{F1} = 0.2586$).
+  - **Actual result:** Verified outperformance across accuracy, precision, recall, and F1.
+- [x] Select preferred skill model based on empirical evidence
+  - **Command used:** Metric comparison analysis.
+  - **Expected result:** Selects Random Forest due to higher weighted F1 ($0.9442$ vs $0.9351$).
+  - **Actual result:** Random Forest selected and documented in `skill_metrics.json`.
+
+## ML Consolidation, Comparison & Validation (Phase 2D)
+- [x] Validate model artifacts deserialization and predictions
+  - **Command used:** `python -u src/models/validate_models.py`
+  - **Expected result:** Loads all 5 joblib binaries and verifies prediction outputs on $X\_test$.
+  - **Actual result:** All 5 artifacts loaded and validated.
+- [x] Execute automated model quality gates
+  - **Command used:** Quality gate evaluation in `validate_models.py`.
+  - **Expected result:** All 3 active model components pass quality gates.
+  - **Actual result:** All quality gates PASSED.
+- [x] Build centralized model registry artifact
+  - **Command used:** `build_model_registry(models_dir, processed_dir)`
+  - **Expected result:** Saves `data/models/model_registry.json`.
+  - **Actual result:** Registry saved with complete metadata.
+- [x] Consolidate evaluation metrics summary
+  - **Command used:** `build_metrics_summary(models_dir)`
+  - **Expected result:** Saves `data/models/model_metrics_summary.csv`.
+  - **Actual result:** Metrics summary exported.
+- [x] Verify end-to-end raw telemetry inference pipeline
+  - **Command used:** `test_end_to_end_inference(processed_dir, models_dir)`
+  - **Expected result:** Raw telemetry transforms via `ml_preprocessor.joblib` and passes through all models.
+  - **Actual result:** Inference verified (Score: 72.75%, Risk: On-Track, Skill: Intermediate).
+- [x] Author comprehensive ML layer report
+  - **Command used:** Created `docs/ML_MODEL_REPORT.md`.
+  - **Expected result:** Document details architecture, metrics, feature importances, quality gates, and disclosures.
+  - **Actual result:** Comprehensive report authored and verified.
+
+## Learner Intelligence & Personalization (Phase 3)
+- [x] Learner profile engine built
+  - **Command used:** `python -u scratch/verify_phase3.py`
+  - **Expected result:** Single learner profile generated with score interpretation, risk mapping, topic categorization, and behavioral signals.
+  - **Actual result:** Profile engine generated valid JSON structure.
+- [x] Zero target leakage enforced
+  - **Command used:** Target isolation audit in `learner_profile.py`.
+  - **Expected result:** Forbidden target columns stripped prior to feature scaling.
+  - **Actual result:** Zero target leakage verified.
+- [x] Batch learner profiles generated
+  - **Command used:** `python -u src/intelligence/generate_profiles.py`
+  - **Expected result:** 1,000 JSON profiles saved to `data/intelligence/learner_profiles.json` and `profile_summary.csv`.
+  - **Actual result:** Batch generation completed successfully.
+
+## Personalized Recommendation Engine (Phase 4)
+- [x] 2-Stage Recommendation Architecture built
+  - **Command used:** `python -u scratch/verify_phase4.py`
+  - **Expected result:** Candidate generation across 6 channels, priority scoring formula (0-100), critic validation loop, and top-5 ranking + `next_best_action`.
+  - **Actual result:** Recommendation engine created and verified.
+- [x] Deterministic Critic filter & deduplication verified
+  - **Command used:** Candidate validation test in `verify_phase4.py`.
+  - **Expected result:** Filters invalid curriculum topics, duplicate actions, and risk-inappropriate challenges.
+  - **Actual result:** Critic filter verified.
+- [x] Batch recommendations generated
+  - **Command used:** `python -u src/recommendation/generate_recommendations.py`
+  - **Expected result:** 1,000 JSON recommendation results saved to `data/recommendations/learner_recommendations.json` and `recommendation_summary.csv`.
+  - **Actual result:** Batch generation completed successfully.
+
+## AI Quantum Tutor & Loop Engineering (Phase 5)
+- [x] Configurable LLM Provider Abstraction built
+  - **Command used:** `python -u scratch/verify_phase5.py`
+  - **Expected result:** Provider client `src/tutor/llm_client.py` supports environment configuration (`LLM_PROVIDER`, `LLM_MODEL`, `LLM_API_KEY`) and offline Mock mode.
+  - **Actual result:** Provider abstraction built and verified.
+- [x] Offline Mock LLM Client implemented
+  - **Command used:** `src/tutor/mock_llm.py` execution in test suite.
+  - **Expected result:** Deterministic JSON responses generated for all 6 tutor modes without live API keys.
+  - **Actual result:** Mock client verified across all modes.
+- [x] Multi-mode AI Quantum Tutor engine built
+  - **Command used:** `tutor(query, mode, profile, recommendation)`
+  - **Expected result:** Supports `explain`, `hint`, `debug`, `code_explain`, `circuit_explain`, `practice` modes.
+  - **Actual result:** Verified all 6 modes.
+- [x] Bounded Loop Engineering Architecture verified
+  - **Command used:** Loop refinement test in `verify_phase5.py`.
+  - **Expected result:** Exits early on score $\ge 85.0$; refines prompt up to `MAX_ITERATIONS = 3`; tracks best response.
+  - **Actual result:** Bounded loop engineering verified.
+- [x] Deterministic fallback critic & security audit passed
+  - **Command used:** AST security scan in `verify_phase5.py`.
+  - **Expected result:** 0 occurrences of `eval()` or `exec()`; fallback critic handles API errors safely.
+  - **Actual result:** Passed security scan and fallback critic checks.
+
+## Backend / API Integration (Phase 6)
+- [x] FastAPI REST application built
+  - **Command used:** `python -m pytest -q`
+  - **Expected result:** Routes `/health`, `/api/learners/{id}/profile`, `/api/learners/{id}/recommendations`, `/api/tutor`, and `/api/learners/predict` execute cleanly.
+  - **Actual result:** All 31 API unit & integration tests passed cleanly.
+- [x] In-memory artifact caching store created
+  - **Command used:** `ArtifactStore` preloading test.
+  - **Expected result:** Pre-loads static JSON artifacts and ML models once on startup with $O(1)$ dictionary lookups.
+  - **Actual result:** ArtifactStore verified.
+
+## Full Integration, Testing & Hackathon Demo (Phase 7)
+- [x] Interactive end-to-end demo script executed
+  - **Command used:** `python scripts/demo.py`
+  - **Expected result:** Displays complete learner journey across Profile, Recommendations, and Tutor Loop in under 2 seconds.
+  - **Actual result:** Demo executed successfully.
+- [x] Static project validation script executed
+  - **Command used:** `python scripts/validate_project.py`
+  - **Expected result:** Confirms presence and parseability of all 11 required data and model joblib binaries.
+  - **Actual result:** All project integrity checks passed.
+- [x] Full regression test suite passed
+  - **Command used:** `python -m pytest -q`
+  - **Expected result:** 100% pass rate across 33 test items.
+  - **Actual result:** `33 passed, 1 warning in 4.24s`.
+- [x] Static Python syntax compilation verified
+  - **Command used:** `python -m compileall src tests scripts`
+  - **Expected result:** 0 syntax or import errors.
+  - **Actual result:** Clean compilation across all modules.
+- [x] Hackathon Demo Guide & System Walkthrough authored
+  - **Command used:** Created `docs/DEMO_GUIDE.md`.
+  - **Expected result:** Complete guide documenting platform capabilities, execution steps, and live/mock LLM setup.
+  - **Actual result:** `docs/DEMO_GUIDE.md` authored and verified.

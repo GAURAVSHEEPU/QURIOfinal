@@ -1,0 +1,66 @@
+[
+  {
+    "topic_id": "qubits",
+    "name": "Qubits",
+    "difficulty": "Beginner",
+    "prerequisites": [],
+    "description": "Fundamental quantum state units representing information in linear combinations of |0⟩ and |1⟩ states."
+  },
+  {
+    "topic_id": "superposition",
+    "name": "Superposition",
+    "difficulty": "Beginner",
+    "prerequisites": ["qubits"],
+    "description": "The principle where a qubit exists simultaneously in a linear combination of basis states until measured."
+  },
+  {
+    "topic_id": "measurement",
+    "name": "Quantum Measurement",
+    "difficulty": "Beginner",
+    "prerequisites": ["superposition"],
+    "description": "Observation process that collapses a quantum superposition state probabilistically to a classical basis state."
+  },
+  {
+    "topic_id": "quantum_gates",
+    "name": "Quantum Gates",
+    "difficulty": "Intermediate",
+    "prerequisites": ["qubits", "superposition"],
+    "description": "Unitary linear transformations (such as Hadamard, Pauli-X, CNOT) applied to modify qubit states in a circuit."
+  },
+  {
+    "topic_id": "entanglement",
+    "name": "Entanglement",
+    "difficulty": "Intermediate",
+    "prerequisites": ["qubits", "quantum_gates"],
+    "description": "Quantum phenomenon where two or more qubits become correlated such that the state of one instantly determines another."
+  },
+  {
+    "topic_id": "bell_states",
+    "name": "Bell States",
+    "difficulty": "Intermediate",
+    "prerequisites": ["entanglement", "quantum_gates", "measurement"],
+    "description": "Specific maximally entangled two-qubit states created using Hadamard and CNOT gates."
+  },
+  {
+    "topic_id": "quantum_circuits",
+    "name": "Quantum Circuits",
+    "difficulty": "Intermediate",
+    "prerequisites": ["quantum_gates", "measurement"],
+    "description": "Sequences of quantum gates, state preparation operations, and measurements acting on qubits."
+  },
+  {
+    "topic_id": "grovers_algorithm",
+    "name": "Grover's Algorithm",
+    "difficulty": "Advanced",
+    "prerequisites": ["quantum_circuits", "bell_states"],
+    "description": "Quantum search algorithm providing quadratic speedup for unstructured database lookup using amplitude amplification."
+  },
+  {
+    "topic_id": "shors_algorithm",
+    "name": "Shor's Algorithm",
+    "difficulty": "Advanced",
+    "prerequisites": ["quantum_circuits", "grovers_algorithm"],
+    "description": "Quantum algorithm for integer factorization in polynomial time using quantum phase estimation and order finding."
+  }
+]
+

@@ -138,6 +138,28 @@ body {
   background: rgba(237, 106, 90, 0.08);
 }
 
+/* The right-hand cluster: seven section links, My Progress, the account
+   chip and a CTA. That is a hair too wide for one row on a 1360px laptop,
+   so the type and spacing tighten there rather than the header splitting
+   into two rows. */
+.atlas-nav-cluster {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1500px) {
+  .atlas-nav-cluster {
+    gap: 7px;
+  }
+
+  .atlas-nav-cluster .atlas-nav-link {
+    font-size: 16px;
+    padding: 6px 9px;
+  }
+}
+
 .atlas-sage-panel {
   background: #E6EBE0;
   position: relative;
@@ -245,6 +267,66 @@ body {
   border-color: #22252A;
   background: rgba(34, 37, 42, 0.05);
 }
+
+/* ── AI tutor workflow ───────────────────────────────────────── */
+.tutor-page { min-height: 100vh; background: linear-gradient(135deg, #FAFAF8 0%, #F4F1DE 52%, #EBF1ED 100%); color: var(--atlas-charcoal); }
+.tutor-shell { max-width: 1320px; margin: 0 auto; padding: 64px 28px 72px; }
+.tutor-hero { display: flex; align-items: end; justify-content: space-between; gap: 28px; margin-bottom: 40px; }
+.tutor-hero h1 { max-width: 760px; margin-top: 12px; font: 600 clamp(2rem, 4vw, 3.6rem)/1.08 'Exo 2', sans-serif; letter-spacing: -0.02em; }
+.tutor-hero h1 span { color: #D95342; }
+.tutor-hero p { max-width: 640px; margin-top: 16px; color: var(--atlas-muted); font-size: 16px; line-height: 1.7; }
+.tutor-kicker, .tutor-section-label { display: flex; align-items: center; gap: 7px; color: #9A710B; font: 700 11px/1.2 'Exo 2', sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+.tutor-hero-badge { display: grid; grid-template-columns: auto auto; align-items: center; gap: 0 9px; padding: 14px 18px; border: 1px solid #E2E6DF; border-radius: 14px; background: rgba(255,255,255,.72); color: #D97706; }
+.tutor-hero-badge strong { font: 700 24px 'Exo 2', sans-serif; color: #22252A; }
+.tutor-hero-badge span { grid-column: 2; color: #5A6578; font-size: 11px; }
+.tutor-layout { display: grid; grid-template-columns: 240px minmax(0, 1fr) 330px; gap: 18px; align-items: start; }
+.tutor-goals, .tutor-chat { padding: 18px; }
+.tutor-goal { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 12px; padding: 13px 11px; border: 1px solid transparent; border-radius: 10px; background: transparent; color: #22252A; text-align: left; cursor: pointer; }
+.tutor-goal:hover, .tutor-goal.is-active { background: #FEF3C7; border-color: #F1D78B; }
+.tutor-goal strong, .tutor-goal small, .tutor-step strong, .tutor-step small { display: block; }
+.tutor-goal strong { font-size: 13px; }
+.tutor-goal small, .tutor-step small { margin-top: 5px; color: #5A6578; font-size: 11px; line-height: 1.45; }
+.tutor-goal-meta { display: flex; justify-content: space-between; margin: 20px 4px 2px; color: #8A93A0; font-size: 11px; }
+.tutor-progress-head { display: flex; align-items: end; justify-content: space-between; gap: 16px; }
+.tutor-progress-head h2 { margin-top: 6px; font: 600 25px 'Exo 2', sans-serif; }
+.tutor-progress-head > span { color: #9A710B; font: 700 13px 'Exo 2', sans-serif; }
+.tutor-progress-bar { height: 6px; margin: 18px 0; overflow: hidden; border-radius: 5px; background: #E2E6DF; }
+.tutor-progress-bar span { display: block; height: 100%; border-radius: inherit; background: #D97706; transition: width .3s ease; }
+.tutor-steps { display: grid; gap: 8px; }
+.tutor-step { display: flex; align-items: flex-start; gap: 12px; padding: 13px 14px; border: 1px solid transparent; border-radius: 12px; background: rgba(255,255,255,.48); color: #22252A; text-align: left; cursor: pointer; }
+.tutor-step:hover, .tutor-step.is-current { border-color: #9BC1BC; background: #FFF; }
+.tutor-step.is-done { color: #4E7A74; }
+.tutor-step-number { display: grid; place-items: center; flex: 0 0 25px; width: 25px; height: 25px; border-radius: 50%; background: #EBF1ED; color: #4E7A74; font: 700 12px 'Exo 2', sans-serif; }
+.tutor-step.is-current .tutor-step-number { background: #D97706; color: #FFF; }
+.tutor-step strong { font-size: 13px; }
+.tutor-action { display: flex; align-items: center; justify-content: space-between; gap: 22px; margin-top: 18px; padding: 21px; border-left: 4px solid #D97706; }
+.tutor-action h3 { margin-top: 7px; font: 600 21px 'Exo 2', sans-serif; }
+.tutor-action p { margin-top: 6px; color: #5A6578; font-size: 13px; line-height: 1.5; }
+.tutor-action-buttons { display: flex; flex-wrap: wrap; justify-content: end; gap: 8px; }
+.tutor-action-buttons .btn-atlas-coral, .tutor-action-buttons .btn-atlas-ghost { padding: 10px 13px; font-size: 12px; white-space: nowrap; }
+.tutor-chat { min-height: 420px; }
+.tutor-chat-head { display: flex; align-items: center; gap: 10px; padding-bottom: 14px; border-bottom: 1px solid #E2E6DF; }
+.tutor-chat-head > svg { margin-left: auto; }
+.tutor-avatar { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: #FEF3C7; color: #D97706; }
+.tutor-chat-head strong, .tutor-chat-head small { display: block; }
+.tutor-chat-head strong { font: 700 14px 'Exo 2', sans-serif; }
+.tutor-chat-head small { margin-top: 2px; color: #8A93A0; font-size: 11px; }
+.tutor-chat-body { min-height: 172px; padding: 16px 0; }
+.tutor-message { display: flex; align-items: flex-start; gap: 8px; color: #3A3F47; font-size: 13px; line-height: 1.6; }
+.tutor-message p { padding-top: 5px; }
+.tutor-question { width: fit-content; max-width: 90%; margin: 10px 0 0 auto; padding: 8px 10px; border-radius: 10px 10px 2px 10px; background: #EBF1ED; color: #3A3F47; font-size: 12px; }
+.tutor-prompts { display: flex; flex-wrap: wrap; gap: 6px; }
+.tutor-prompts button { padding: 6px 8px; border: 1px solid #E2E6DF; border-radius: 7px; background: #FAFAF8; color: #5A6578; font-size: 11px; cursor: pointer; }
+.tutor-prompts button:hover { border-color: #D97706; color: #9A710B; }
+.tutor-input { display: flex; gap: 6px; margin-top: 14px; }
+.tutor-input input { min-width: 0; flex: 1; padding: 10px 11px; border: 1px solid #E2E6DF; border-radius: 8px; outline: none; font: inherit; font-size: 12px; }
+.tutor-input input:focus { border-color: #D97706; box-shadow: 0 0 0 3px rgba(217,119,6,.12); }
+.tutor-input button { display: grid; place-items: center; width: 38px; border: 0; border-radius: 8px; background: #D97706; color: #FFF; cursor: pointer; }
+.tutor-trust { display: flex; align-items: center; gap: 5px; margin-top: 13px; color: #8A93A0; font-size: 10px; }
+.tutor-reset { display: inline-flex; align-items: center; gap: 6px; margin-top: 18px; border: 0; background: transparent; color: #8A93A0; font-size: 12px; cursor: pointer; }
+.tutor-reset:hover { color: #D95342; }
+@media (max-width: 1050px) { .tutor-layout { grid-template-columns: 210px minmax(0, 1fr); } .tutor-chat { grid-column: 1 / -1; } }
+@media (max-width: 700px) { .tutor-shell { padding: 40px 18px 56px; } .tutor-hero { display: block; } .tutor-hero-badge { display: inline-grid; margin-top: 22px; } .tutor-layout { display: flex; flex-direction: column; } .tutor-goals, .tutor-workflow, .tutor-chat { width: 100%; } .tutor-action { display: block; } .tutor-action-buttons { justify-content: start; margin-top: 16px; } }
 
 /* ══════════════════════════════════════════════════════════════
    ROADMAP  (/roadmap)
@@ -963,24 +1045,684 @@ body {
   flex-shrink: 0;
 }
 
+/* ══════════════════════════════════════════════════════════════
+   CIRCUIT STUDIO  ·  /circuit
+   The board is fluid horizontally and fixed vertically, so the
+   CNOT connectors and the carrier can be positioned arithmetically
+   rather than measured. Nothing here comes from the uploaded
+   App.css — in particular not its `min-width: 1300px`, which would
+   have made the whole page scroll sideways on a phone.
+   ══════════════════════════════════════════════════════════════ */
+
+.circuit-layout {
+  display: grid;
+  grid-template-columns: 236px minmax(0, 1fr) 396px;
+  gap: 20px;
+  align-items: start;
+}
+
+/* Results drop under the board before the palette does — the
+   palette is narrow and the board needs the width more. */
+@media (max-width: 1240px) {
+  .circuit-layout {
+    grid-template-columns: 236px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 880px) {
+  .circuit-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Only the board scrolls sideways, never the page. */
+.circuit-board-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 4px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.circuit-palette {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.circuit-gate-card {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s ease,
+    border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.circuit-gate-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(34, 37, 42, 0.07);
+}
+
+.circuit-gate-card:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* ── Cells ───────────────────────────────────────────────────── */
+
+/* The drop target only announces itself once you are holding
+   something — an empty board should read as wires, not as a grid
+   of boxes. Hover uses box-shadow because the inline styles own
+   background and border. */
+.circuit-slot {
+  transition: box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.circuit-cell:hover .circuit-slot,
+.circuit-cell:focus-visible .circuit-slot {
+  box-shadow: inset 0 0 0 1.5px rgba(217, 119, 6, 0.4);
+}
+
+.circuit-cell:focus-visible {
+  outline: 2px solid #d97706;
+  outline-offset: -3px;
+}
+
+/* A CNOT control that is still waiting for its target. */
+@keyframes cs-awaiting {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50%      { transform: translate(-50%, -50%) scale(0.78); }
+}
+
+.circuit-awaiting {
+  animation: cs-awaiting 1.1s ease-in-out infinite;
+}
+
+/* The stretch of wire the carrier has already walked. */
+@keyframes cs-wire-pulse {
+  from { opacity: 0.45; }
+  to   { opacity: 1; }
+}
+
+.circuit-wire-live {
+  animation: cs-wire-pulse 0.55s ease-in-out infinite alternate;
+}
+
+/* The carrier walks column to column on a transition, not a spring:
+   the end position is correct even in a tab that has stopped
+   painting frames. Same reasoning as .qubit-climber. */
+.circuit-carrier {
+  transition: left 0.17s linear, opacity 0.3s ease;
+}
+
+/* ── Results ─────────────────────────────────────────────────── */
+
+.circuit-bar {
+  transition: background 0.25s ease;
+}
+
+/* The Bloch arrow slides to its new direction rather than jumping,
+   so a phase change reads as a rotation. */
+.circuit-bloch-arm {
+  transition: x2 0.5s cubic-bezier(0.16, 1, 0.3, 1), y2 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.circuit-bloch-tip {
+  transition: cx 0.5s cubic-bezier(0.16, 1, 0.3, 1), cy 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    r 0.3s ease, fill 0.3s ease;
+}
+
+/* ── Challenges ──────────────────────────────────────────────── */
+
+@keyframes cs-tick {
+  0%   { transform: scale(0.5) rotate(-14deg); }
+  55%  { transform: scale(1.18) rotate(4deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+.circuit-tick {
+  animation: cs-tick 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   ACCOUNTS · /login
+   The first real form in the project — field, label, error and
+   focus styling are all new here. The gatekeeper's position and
+   the gate leaf are CSS transitions rather than springs, for the
+   same reason as .qubit-climber: a spring in a tab that has
+   stopped painting never arrives at its destination.
+   ══════════════════════════════════════════════════════════════ */
+
+.auth-layout {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 52px 28px 90px;
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  gap: 52px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .auth-layout {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    padding-top: 36px;
+  }
+}
+
+@media (max-width: 520px) {
+  .auth-layout {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+/* ── The gate stage ──────────────────────────────────────────── */
+
+.auth-stage {
+  position: relative;
+  height: 264px;
+  margin-top: 26px;
+}
+
+.auth-ground {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+  height: 2px;
+  background: repeating-linear-gradient(
+    to right,
+    rgba(34, 37, 42, 0.28) 0 10px,
+    transparent 10px 20px
+  );
+}
+
+.auth-gate {
+  position: absolute;
+  right: 6%;
+  bottom: 30px;
+  width: 136px;
+  height: 182px;
+  perspective: 620px;
+  z-index: 1;
+}
+
+.auth-gate-post {
+  position: absolute;
+  bottom: 0;
+  width: 9px;
+  height: 100%;
+  border-radius: 3px;
+  background: #22252a;
+}
+
+.auth-gate-lintel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 9px;
+  border-radius: 3px;
+  background: #22252a;
+}
+
+/* Hinged on the left post; swings open the moment credentials land. */
+.auth-gate-leaf {
+  position: absolute;
+  left: 9px;
+  top: 20px;
+  width: calc(100% - 18px);
+  height: calc(100% - 28px);
+  border: 2px solid #22252a;
+  border-radius: 2px;
+  background:
+    repeating-linear-gradient(
+      to right,
+      rgba(34, 37, 42, 0.22) 0 2px,
+      transparent 2px 22px
+    ),
+    rgba(155, 193, 188, 0.3);
+  transform-origin: left center;
+  transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.auth-gate-leaf.is-open {
+  transform: rotateY(-76deg);
+}
+
+.auth-walker {
+  position: absolute;
+  bottom: 26px;
+  transform: translateX(-50%);
+  z-index: 2;
+  transition: left 0.9s cubic-bezier(0.33, 0, 0.67, 1);
+}
+
+.auth-caption {
+  margin-top: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #5a6578;
+  font-style: italic;
+  min-height: 20px;
+}
+
+.auth-perks {
+  list-style: none;
+  margin: 22px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.auth-perks li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13.5px;
+  color: #5a6578;
+}
+
+/* ── The card ────────────────────────────────────────────────── */
+
+.auth-card {
+  padding: 26px;
+}
+
+@media (max-width: 520px) {
+  .auth-card {
+    padding: 20px 18px;
+  }
+}
+
+.auth-card form {
+  display: grid;
+  gap: 16px;
+}
+
+@keyframes au-shake {
+  0%, 100% { transform: translateX(0); }
+  18%      { transform: translateX(-7px); }
+  38%      { transform: translateX(6px); }
+  58%      { transform: translateX(-4px); }
+  78%      { transform: translateX(3px); }
+}
+
+.auth-card.is-rejected {
+  animation: au-shake 0.42s ease-in-out;
+}
+
+.auth-tabs {
+  display: flex;
+  gap: 6px;
+  padding: 4px;
+  border-radius: 11px;
+  background: #f1f3ee;
+  margin-bottom: 22px;
+}
+
+.auth-tab {
+  flex: 1;
+  border: none;
+  border-radius: 8px;
+  padding: 9px 12px;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #5a6578;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.auth-tab:hover:not(:disabled) {
+  color: #22252a;
+}
+
+.auth-tab.is-active {
+  background: #ffffff;
+  color: #22252a;
+  box-shadow: 0 1px 3px rgba(34, 37, 42, 0.1);
+}
+
+.auth-tab:disabled {
+  cursor: not-allowed;
+}
+
+/* ── Fields ──────────────────────────────────────────────────── */
+
+.auth-label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5a6578;
+}
+
+.auth-field {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 13px;
+  border: 1.5px solid #e2e6df;
+  border-radius: 9px;
+  background: #ffffff;
+  font-family: inherit;
+  font-size: 14.5px;
+  color: #22252a;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.auth-field::placeholder {
+  color: #a8b0bb;
+}
+
+.auth-field:focus {
+  border-color: #0081a7;
+  box-shadow: 0 0 0 3px rgba(0, 129, 167, 0.14);
+}
+
+.auth-field[aria-invalid='true'] {
+  border-color: #ed6a5a;
+}
+
+.auth-field[aria-invalid='true']:focus {
+  box-shadow: 0 0 0 3px rgba(237, 106, 90, 0.16);
+}
+
+.auth-field:disabled {
+  background: #f6f5f0;
+  color: #8a929e;
+  cursor: not-allowed;
+}
+
+.auth-eye {
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: #5a6578;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.auth-eye:hover {
+  background: #f1f3ee;
+  color: #22252a;
+}
+
+.auth-error {
+  margin: 7px 0 0;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #ed6a5a;
+}
+
+.auth-hint {
+  margin: 7px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #8a929e;
+}
+
+.auth-form-error {
+  margin: 0;
+  padding: 11px 13px;
+  border-radius: 9px;
+  border: 1.5px solid rgba(237, 106, 90, 0.35);
+  background: rgba(237, 106, 90, 0.08);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #b4402f;
+}
+
+.auth-banner {
+  margin: 0 0 18px;
+  padding: 11px 13px;
+  border-radius: 9px;
+  border: 1.5px solid rgba(217, 165, 33, 0.4);
+  background: rgba(217, 165, 33, 0.1);
+  font-size: 13px;
+  line-height: 1.55;
+  color: #8a6a08;
+}
+
+.auth-submit {
+  width: 100%;
+  justify-content: center;
+  padding: 12px 20px;
+  font-size: 14.5px;
+  margin-top: 4px;
+}
+
+.auth-submit:disabled {
+  opacity: 0.62;
+  cursor: not-allowed;
+}
+
+/* ── Strength ladder ─────────────────────────────────────────── */
+
+.auth-strength-seg {
+  flex: 1;
+  height: 5px;
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+
+.auth-ladder {
+  position: relative;
+  width: 34px;
+  flex-shrink: 0;
+}
+
+.auth-ladder-rail {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  border-radius: 2px;
+  background: rgba(34, 37, 42, 0.16);
+}
+
+.auth-ladder-rung {
+  position: absolute;
+  left: 3px;
+  right: 3px;
+  height: 2px;
+  border-radius: 2px;
+  background: rgba(34, 37, 42, 0.16);
+}
+
+.auth-climber {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: bottom 0.42s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── Avatar picker ───────────────────────────────────────────── */
+
+.auth-avatar-block {
+  padding: 18px;
+  border: 1.5px dashed #e2e6df;
+  border-radius: 12px;
+  background: rgba(230, 235, 224, 0.35);
+}
+
+.auth-avatar-stage {
+  display: grid;
+  place-items: center;
+  min-width: 108px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1.5px solid #e2e6df;
+}
+
+.auth-swatch {
+  width: 26px;
+  height: 26px;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.auth-swatch:hover:not(:disabled) {
+  transform: scale(1.12);
+}
+
+.auth-chip {
+  padding: 7px 13px;
+  border: 1.5px solid #e2e6df;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+/* ── Card footer ─────────────────────────────────────────────── */
+
+.auth-foot {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid #e2e6df;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: #5a6578;
+}
+
+.auth-foot p {
+  margin: 0;
+}
+
+.auth-link {
+  border: none;
+  background: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700;
+  color: #0081a7;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+/* ── Nav account menu ────────────────────────────────────────── */
+
+.auth-menu-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 11px 5px 7px;
+  border: 1.5px solid #e2e6df;
+  border-radius: 999px;
+  background: #ffffff;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #22252a;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.auth-menu-trigger:hover {
+  box-shadow: 0 2px 8px rgba(34, 37, 42, 0.1);
+}
+
+@keyframes au-menu-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.auth-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 60;
+  min-width: 220px;
+  padding: 8px;
+  border: 1.5px solid #e2e6df;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 12px 32px rgba(34, 37, 42, 0.14);
+  animation: au-menu-in 0.18s ease-out;
+}
+
+.auth-menu-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 8px 12px;
+  border-bottom: 1px solid #e2e6df;
+  margin-bottom: 6px;
+}
+
+.auth-menu-item {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 10px;
+  border: none;
+  border-radius: 8px;
+  background: none;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #22252a;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.auth-menu-item:hover {
+  background: #f1f3ee;
+}
+
 /* ── Reduced motion ──────────────────────────────────────────── */
 
 @media (prefers-reduced-motion: reduce) {
   .qubit-figure, .qubit-badge-earned, .qubit-hill-flag,
   .qubit-twin-link, .qubit-card-locked:hover .qubit-lock,
-  .qubit-pad-target::after, .qubit-shine::after {
+  .qubit-pad-target::after, .qubit-shine::after,
+  .circuit-awaiting, .circuit-wire-live, .circuit-tick,
+  .auth-card.is-rejected, .auth-menu {
     animation: none !important;
   }
 
   .qubit-beam, .qubit-load, .qubit-bar, .qubit-pad,
   .qubit-badge, .qubit-choice, .qubit-card, .qubit-ring-track,
-  .qubit-climber, .qubit-route {
+  .qubit-climber, .qubit-route,
+  .circuit-carrier, .circuit-gate-card, .circuit-slot,
+  .circuit-bar, .circuit-bloch-arm, .circuit-bloch-tip,
+  .auth-walker, .auth-gate-leaf, .auth-climber, .auth-field,
+  .auth-strength-seg, .auth-swatch, .auth-chip, .auth-tab,
+  .auth-eye, .auth-menu-trigger, .auth-menu-item {
     transition: none !important;
   }
 
   .qubit-card-open:hover,
   .qubit-choice:hover:not(:disabled),
-  .qubit-badge:hover {
+  .qubit-badge:hover,
+  .circuit-gate-card:hover,
+  .circuit-gate-card:active,
+  .auth-swatch:hover:not(:disabled) {
     transform: none !important;
   }
 
