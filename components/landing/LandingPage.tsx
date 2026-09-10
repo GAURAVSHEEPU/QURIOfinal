@@ -170,9 +170,6 @@ export default function QuantumAtlasLandingPage() {
                   Begin the Journey <ArrowRight size={16} />
                 </a>
 
-                <a href="#entries" className="btn-atlas-ghost">
-                  <Compass size={16} color="#ED6A5A" /> Quantum Atlas
-                </a>
 
                 <Link
                   href="/circuit"
@@ -236,7 +233,7 @@ export default function QuantumAtlasLandingPage() {
                  Step into the quantum world—where particles behave beyond imagination.
                 </p>
                 <Link
-                  href="/learn"
+                  href="/roadmap"
                   className="btn-atlas-coral"
                   style={{ width: '100%', justifyContent: 'center', fontSize: 14 }}
                 >

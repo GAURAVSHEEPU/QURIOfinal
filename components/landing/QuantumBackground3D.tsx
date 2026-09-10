@@ -77,7 +77,7 @@ export default function QuantumBackground3D() {
     const waveGroup = new THREE.Group();
 
     // Floating probability cloud particles
-    const particleCount = 280;
+    const particleCount = 120;
     const particlePositions = new Float32Array(particleCount * 3);
     const particleColors = new Float32Array(particleCount * 3);
     const coralCol = new THREE.Color(0xed6a5a);
@@ -199,7 +199,7 @@ export default function QuantumBackground3D() {
     // MODE 3: BLOCH SPHERE STATEVECTOR DYNAMICS
     // ══════════════════════════════════════════════
     const blochGroup = new THREE.Group();
-    blochGroup.position.set(0, 3, 0);
+    blochGroup.position.set(25, 0, 0);
 
     const blochRadius = 11;
     // Sphere wireframe
@@ -320,11 +320,10 @@ export default function QuantumBackground3D() {
         camera.position.y = 18 + mousePos.current.y;
         camera.lookAt(0, 2, 0);
 
-        // Visibility toggling according to active mode
         const currentMode = modeRef.current;
-        waveGroup.visible = currentMode === 'wave';
+        waveGroup.visible = true;
         orbitalGroup.visible = currentMode === 'orbital';
-        blochGroup.visible = currentMode === 'bloch';
+        blochGroup.visible = true;
 
         // 1. Wavepacket updates
         if (waveGroup.visible) {

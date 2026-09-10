@@ -141,17 +141,34 @@ export async function askTutorBackend(opts: TutorAskOptions): Promise<TutorReply
   // 3. Graceful Deterministic Fallback (never breaks UX)
   const qLower = opts.question.toLowerCase();
   let fallbackAnswer = `Keep this step concrete: ${opts.stepDetail}. Follow the suggested action: "${opts.stepAction}".`;
+  let fallbackHint = `For this step: ${opts.stepDetail}`;
+  let fallbackNextStep = opts.stepAction;
 
-  if (qLower.includes('hint')) {
-    fallbackAnswer = `Look for the smallest experiment that can answer the question. For this step: ${opts.stepDetail.toLowerCase()}`;
-  } else if (qLower.includes('next') || qLower.includes('try')) {
-    fallbackAnswer = `Your next move is “${opts.stepAction}”. When you finish, mark this step complete and I'll move you forward.`;
+  if (qLower.includes('hint') || qLower.includes('help') || qLower.includes('stuck')) {
+    fallbackAnswer = `Look for the smallest experiment that can answer the question. For this step: start with the smallest unit of quantum information. Follow the suggested action: "${opts.stepAction}".`;
+    fallbackHint = 'Try the smallest possible experiment first.';
+  } else if (qLower.includes('why') || qLower.includes('how does')) {
+    fallbackAnswer = `That's a great question about quantum concepts! For now, focus on completing this step: ${opts.stepDetail}. You'll understand the "why" better once you try it: "${opts.stepAction}".`;
+    fallbackHint = 'Understanding grows from doing, not just reading.';
+  } else if (qLower.includes('what') || qLower.includes('explain') || qLower.includes('understand')) {
+    fallbackAnswer = `To understand this better, the best approach is hands-on learning. ${opts.stepDetail}. Try this: ${opts.stepAction}.`;
+    fallbackHint = 'Quantum concepts are best learned through practice.';
+  } else if (qLower.includes('next') || qLower.includes('try') || qLower.includes('should i')) {
+    fallbackAnswer = `Your next move is to ${opts.stepAction.toLowerCase()}. When you finish, mark this step complete and I'll move you forward.`;
+    fallbackHint = 'Each step builds on the last one.';
+    fallbackNextStep = opts.stepAction;
+  } else if (qLower.includes('challenge') || qLower.includes('difficult') || qLower.includes('hard')) {
+    fallbackAnswer = `This step might feel challenging at first! Remember: ${opts.stepDetail}. The key is to take action: ${opts.stepAction}. You'll build intuition as you practice.`;
+    fallbackHint = 'Quantum concepts reveal themselves through experimentation.';
+  } else if (qLower.includes('concrete') || qLower.includes('example') || qLower.includes('show me')) {
+    fallbackAnswer = `A concrete way to explore this: ${opts.stepAction}. This will give you hands-on experience with ${opts.stepDetail.toLowerCase()}.`;
+    fallbackHint = 'The best way to learn is by doing.';
   }
 
   return {
     answer: fallbackAnswer,
-    hint: `For this step: ${opts.stepDetail}`,
-    next_step: opts.stepAction,
+    hint: fallbackHint,
+    next_step: fallbackNextStep,
     isAi: false,
     suggestions: [
       'Why does H create superposition?',

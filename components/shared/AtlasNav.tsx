@@ -32,7 +32,7 @@ interface Item {
 const ITEMS: Item[] = [
   // { label: 'Get Started', hash: '#start' },
   { label: 'Atlas Entries', hash: '#entries' },
-  { label: 'Interactives', hash: '#interactives' },
+  
   { id: 'roadmap', label: 'Roadmap', href: '/roadmap' },
   { id: 'qubit', label: 'Qurio Qubit', href: '/qubit' },
   { label: 'Circuit Studio', id: 'circuit', href: '/circuit' },

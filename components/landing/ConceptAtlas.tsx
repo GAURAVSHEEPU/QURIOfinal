@@ -17,6 +17,7 @@ interface ConceptEntry {
   application: string;
   actionUrl: string;
   actionText: string;
+  imageUrl?: string;
 }
 
 const ATLAS_ENTRIES: ConceptEntry[] = [
@@ -67,13 +68,15 @@ const ATLAS_ENTRIES: ConceptEntry[] = [
       'Visualizing single-qubit quantum logic gates (Pauli-X, Y, Z, Hadamard, Phase rotations).',
     actionUrl: '/simulate',
     actionText: 'Open 3D Bloch Sphere',
+    imageUrl:
+      'https://imgs.search.brave.com/esCzNItS7EAyOz-Z_Qzhq4pvLhp-37GxRSFRJKQUA80/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9xdXRp/cC5vcmcvZG9jcy80/LjAuMi9pbWFnZXMv/YmxvY2gzZCtkYXRh/LnBuZw',
   },
   {
     id: 'tunneling',
     title: 'Quantum Tunneling',
     category: 'Physics',
     symbol: 'T ≈ e^(-2κL)',
-    tagline: 'Particles traversing through finite potential energy barriers higher than their kinetic energy.',
+    tagline: 'Particles passing through energy barriers they cannot classically cross.',
     formula: 'T ≈ exp(-2L √(2m(V₀ - E)) / ℏ)',
     description:
       'Because matter exhibits wave-like characteristics, the wave function has a non-zero probability amplitude on the other side of an energetic barrier.',
@@ -83,6 +86,8 @@ const ATLAS_ENTRIES: ConceptEntry[] = [
       'Scanning Tunneling Microscopes (STM), alpha radioactive decay, flash memory, and nuclear fusion in stars.',
     actionUrl: '/learn',
     actionText: 'Study in Quantum Module',
+    imageUrl:
+      'https://imgs.search.brave.com/hKrjq2IohMEQZmrtsxuDDNqKMfQF0iiw4X1d21awyZ8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMubmV3YXRsYXMu/Y29tL2RpbXM0L2Rl/ZmF1bHQvNmYzZDU0/OC8yMTQ3NDgzNjQ3/L3N0cmlwL3RydWUv/Y3JvcC84MDB4NDQx/KzArMC9yZXNpemUv/ODAweDQ0MSEvZm9y/bWF0L3dlYnAvcXVh/bGl0eS85MC8_dXJs/PWh0dHBzOi8vbmV3/YXRsYXMtYnJpZ2h0/c3BvdC5zMy5hbWF6/b25hd3MuY29tL2Fy/Y2hpdmUvcXVhbnR1/bS10dW5uZWxsaW5n/LTQuanBlZw',
   },
   {
     id: 'grover',
@@ -99,6 +104,8 @@ const ATLAS_ENTRIES: ConceptEntry[] = [
       'Database querying, collision attacks against cryptographic hash functions, optimization problems.',
     actionUrl: '/circuit',
     actionText: 'Run Grover Circuit',
+    imageUrl:
+      'https://imgs.search.brave.com/oYhVXR--fOhgXnSTa1EOHBeRa30Wkt2CyxIvkqG2wsM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9xdWFu/dHVtLmNsb3VkLmli/bS5jb20vbGVhcm5p/bmcvaW1hZ2VzL21v/ZHVsZXMvY29tcHV0/ZXItc2NpZW5jZS9n/cm92ZXJzL2dyb3Zl/ci1vcmFjbGUtcXVl/c3Rpb24uYXZpZj9k/cGw9MC0xLTE1NjQt/NzczY2Y0NmNhYmU4'
   },
   {
     id: 'shor',
@@ -115,6 +122,8 @@ const ATLAS_ENTRIES: ConceptEntry[] = [
       'Post-quantum cryptography (PQC), quantum key distribution, integer factorization analysis.',
     actionUrl: '/learn',
     actionText: 'Explore Shor Roadmap',
+    imageUrl:
+      'https://imgs.search.brave.com/uKC4Px_LxThx6BpdOUTXxjgPd58HtV13N79yEgOrwjw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jb2xv/cnRva2Vucy5jb20v/d3AtY29udGVudC91/cGxvYWRzL2ltYWdl/LTEwNy53ZWJw'
   },
   {
     id: 'qubits-gates',
@@ -131,13 +140,15 @@ const ATLAS_ENTRIES: ConceptEntry[] = [
       'Designing arbitrary universal quantum computing circuits in Qiskit, Cirq, and Pennylane.',
     actionUrl: '/circuit',
     actionText: 'Drag-and-Drop Gate Editor',
+    imageUrl:
+      'https://imgs.search.brave.com/lZnzDzjH2FTXEFhWh26PjolxU0uK3zGzMNRBJr-w0-o/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4t/aW1hZ2VzLTEubWVk/aXVtLmNvbS9tYXgv/ODAwLzEqQXZCcWhj/N1ZCOE1ZNHNTX2lO/WUhtQS5qcGVn'
   },
   {
     id: 'decoherence',
     title: 'Quantum Decoherence',
     category: 'Physics',
     symbol: 'T₁, T₂ Relaxation',
-    tagline: 'Loss of quantum phase coherence due to environmental noise and entanglement with surroundings.',
+    tagline: 'Loss of quantum coherence due to environmental noise and entanglement.',
     formula: 'ρ_ij(t) = ρ_ij(0) · exp(-t / T₂)',
     description:
       'The transition of a pure quantum state into a classical statistical mixture as energy and phase leak into ambient thermal fluctuations.',
@@ -147,6 +158,8 @@ const ATLAS_ENTRIES: ConceptEntry[] = [
       'Quantum error correction (QEC), surface codes, and ultra-cold dilution refrigerators (15 mK).',
     actionUrl: '/ai-tutor',
     actionText: 'Ask AI Tutor on Decoherence',
+    imageUrl:
+      'https://imgs.search.brave.com/KyT-DHYmnMK-LT4B-Ud3HaYuY_f4N2_7Sd1lp8w3JaY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zZWxm/YXdhcmVwYXR0ZXJu/cy5jb20vd3AtY29u/dGVudC91cGxvYWRz/LzIwMjAvMTIvMTAy/NHB4LWRvdWJsZS1z/bGl0LnN2Z18ucG5n'
   },
 ];
 
@@ -155,6 +168,7 @@ export default function ConceptAtlas() {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [activeModalEntry, setActiveModalEntry] = useState<ConceptEntry | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [hoveredEntryId, setHoveredEntryId] = useState<string | null>(null);
 
   const categories = ['All', 'Fundamentals', 'Computing', 'Algorithms', 'Physics'];
 
@@ -258,7 +272,7 @@ export default function ConceptAtlas() {
         {/* Track — each card is 25% wide (gap handled via padding) */}
         <div
           style={{
-            height: "360px",
+            height: '360px',
             display: 'flex',
             justifyContent: 'center',
             transition: 'transform 0.45s cubic-bezier(0.4, 0, 0.2, 1)',
@@ -276,25 +290,58 @@ export default function ConceptAtlas() {
             >
               <div
                 onClick={() => setActiveModalEntry(entry)}
+                onMouseEnter={() => setHoveredEntryId(entry.id)}
+                onMouseLeave={() => setHoveredEntryId(null)}
                 className="atlas-card"
-                style={{ padding: 28, cursor: 'pointer', height: '100%' }}
+                style={{
+                  position: 'relative',
+                  cursor: 'pointer',
+                  width: '280px',
+                  height: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  overflow: 'hidden',
+                  borderRadius: 0,
+                }}
               >
-                <span
+
+
+                <div
                   style={{
-                    fontSize: 11,
-                    fontWeight: 700,
-                    letterSpacing: '0.04em',
-                    textTransform: 'uppercase',
-                    color: '#e13333',
-                    background: '#FDECE9',
-                    padding: '5px 15px',
-                    // borderRadius: 999,
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    width: '100%',
+                    height: '100%',
                   }}
                 >
-                  {entry.category}
-                </span>
-                <h3 style={{ fontSize: 20, margin: '24px 0 18px' }}>{entry.title}</h3>
-                <p style={{ color: '#5A6578', fontSize: 14, lineHeight: 1.5 }}>{entry.tagline}</p>
+                  <img
+                    src={entry.imageUrl ?? 'https://imgs.search.brave.com/xvn3zv2cbMRRHQigvnuepIi_WsE2VJEIbD2ZafSbHMc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvbmVv/bi1zLWluLWhlYXJ0/LTNpeHdpeGY5cmNq/Z2JvNGMuanBn'}
+                    alt=""
+                    aria-hidden="true"
+                    style={{
+                      maxWidth: '100%',
+                      maxHeight: '100%',
+                      objectFit: 'contain',
+                    }}
+                  />
+                </div>
+                <div
+                  style={{
+                    marginTop: 'auto',
+                    border: 'none',
+                    position: 'relative',
+                    padding: '5px 5px',
+                    flex: '0 0 auto',
+                    zIndex: 1,
+                    backdropFilter: 'blur(5px)',
+                    backgroundColor: hoveredEntryId === entry.id ? '#F59E0B' : 'transparent',
+                    transition: 'all 0.5s ease',
+                  }}
+                >
+                  <h3 style={{ fontSize: 16, padding: '5px 3px', margin: 'auto 0 0' }}>{entry.title}</h3>
+                  <p style={{ color: '#6b6e74', fontSize: 12.5, padding: '0 3px 3px 3px' }}>{entry.tagline}</p>
+                </div>
               </div>
             </div>
           ))}

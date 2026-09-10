@@ -285,7 +285,8 @@ def resolve_topic(
 
     if explicit_concept:
         # Check if query expresses a relation to previous topic
-        referential_rel_triggers = ["relate", "relation", "vulnerable", "break", "shor", "grover", "differ", "difference", "useful", "connect", "why"]
+        # NOTE: Only actual relationship words, NOT algorithm names like "shor"/"grover"
+        referential_rel_triggers = ["relate", "relation", "vulnerable", "break", "differ", "difference", "useful", "connect", "why"]
         has_relation_trigger = prev_topic and any(trig in query_lower for trig in referential_rel_triggers)
 
         # Short fragments like "RSA", "QFT", "Grover" introducing a concept
@@ -674,6 +675,8 @@ def build_system_prompt(context: dict) -> str:
     skill_level = context["skill_level"]
     query = context.get("query", "")
     history = context.get("history", [])
+    is_follow_up = context.get("is_follow_up", False)
+    relationship = context.get("relationship")
 
     prompt = f"""You are an expert AI Quantum Computing Tutor.
 
@@ -682,6 +685,13 @@ You should behave like an excellent human tutor rather than a search engine or a
 You can explain concepts from beginner to advanced levels, answer follow-up questions, compare concepts, provide examples, explain mathematics, walk through algorithms, explain quantum circuits and gates, help with Qiskit/code, provide hints, and analyze learner mistakes.
 Always answer the user's actual question.
 Never force an unrelated quantum concept into an answer simply because it is a quantum topic.
+
+CRITICAL CONTEXT HANDLING:
+- If the current question is about a NEW quantum topic (NOT a follow-up to the previous message),
+  disregard all previous conversation history and answer ONLY based on the current question.
+- Use previous history only when the current question directly references, compares to, or asks about
+  something from the immediately previous exchange.
+- Never let unrelated earlier conversation contaminate your answer about a new topic.
 
 VERIFIED LEARNER GROUNDED CONTEXT:
 - Learner ID: {context.get('learner_id', 'Unavailable')}
@@ -694,12 +704,17 @@ VERIFIED LEARNER GROUNDED CONTEXT:
 - User Query: "{query}"
 """
 
-    if history:
+    # GATE: Only include conversation history for genuine follow-ups
+    if history and is_follow_up:
         history_formatted = []
-        for turn in history[-5:]:
+        # Include only last 2 most relevant turns (not 5) to reduce context noise
+        for turn in history[-2:]:
             ans_snippet = turn['answer'][:250].replace('\n', ' ')
             history_formatted.append(f"User: {turn['query']}\nTutor ({turn['concept']}): {ans_snippet}...")
-        prompt += f"\nRECENT CONVERSATION HISTORY:\n" + "\n".join(history_formatted) + "\n"
+        prompt += f"\nRECENT CONVERSATION CONTEXT (follow-up to: {relationship}):\n" + "\n".join(history_formatted) + "\n"
+    elif history and not is_follow_up:
+        # Explicitly remind model that this is a new topic
+        prompt += f"\nNOTE: Current question starts a NEW topic. Ignore previous conversation context above.\n"
 
     prompt += f"""
 LEARNER ADAPTATION ({skill_level.upper()} LEVEL):

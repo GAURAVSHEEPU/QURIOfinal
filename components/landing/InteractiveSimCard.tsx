@@ -362,24 +362,7 @@ export default function InteractiveSimCard() {
           Explore full interactive simulations with code generation:
         </span>
         <div style={{ display: 'flex', gap: 10 }}>
-          <Link
-            href="/simulate"
-            style={{
-              textDecoration: 'none',
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: 6,
-              fontSize: 13,
-              fontWeight: 600,
-              color: '#0081A7',
-              background: '#E6F4F8',
-              padding: '7px 14px',
-              borderRadius: 8,
-              transition: 'all 0.2s',
-            }}
-          >
-            <Eye size={14} /> 3D Bloch Sim
-          </Link>
+          
           <Link
             href="/circuit"
             style={{
