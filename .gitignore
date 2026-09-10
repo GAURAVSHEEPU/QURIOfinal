@@ -46,3 +46,4 @@ next-env.d.ts
 # Python bytecode from the optional circuit-backend server
 __pycache__/
 *.pyc
+.claude/
